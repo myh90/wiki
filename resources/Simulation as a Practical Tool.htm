@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://worrydream.com/SimulationAsAPracticalTool/" -->
+<title>Simulation as a Practical Tool</title>
+
+<link rel="stylesheet" href="Simulation%20as%20a%20Practical%20Tool_files/style.css" type="text/css">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function showAnalyticOptimalSolution () {
+    document.getElementById('analytic_optimal_solution').style.display='block';
+    document.getElementById('clicked_analytic_optimal_solution').style.display='inline';
+    document.getElementById('click_to_see_analytic_optimal_solution').style.display='none';
+}
+
+/* ]]> */
+</script>
+
+</head>
+
+<body>
+
+<h1>Simulation as a Practical Tool</h1>
+<h3>Bret Victor / October 19, 2009</h3>
+
+<p>Mathematics, as currently taught, consists of the manipulation of 
+abstract symbols.  For most people, the level of abstraction makes math 
+unpleasant or unusable as a practical tool for exploring the problems of
+ their lives.</p>
+
+<p>I believe that software makes possible a new form of practical mathematics, based on <strong>concrete modeling, simulation, and visualization</strong>.
+  I believe it is possible to design a tool that enables people to pose 
+and answer their mathematical questions in an entirely concrete domain, 
+without having to invoke abstractions, symbols, or arcane rules.  This 
+tool would eventually displace many symbolic forms of math, in the same 
+way that the pocket calculator has displaced manual arithmetic methods.</p>
+
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/Intro.png" alt=""></p>
+
+<p>This interactive essay is an early step towards justifying and 
+motivating the development of such a tool.  I take a typical school 
+problem which is intended to be solved with equations and geometric 
+reasoning, and present a solution using physical modeling and 
+simulation.  This inspires the posing and solving of more interesting 
+problems.  The simulations represent the problem concretely, without 
+abstractions; provide a broader context, allowing a deeper understanding
+ of the situation; easily handle problems which are difficult or 
+impossible to solve analytically; and can be used to actively create, 
+not just passively understand.</p>
+
+
+
+<h2>Their Least Favorite Subject</h2>
+
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/BookCover2.png" alt=""></p>
+
+<p>The recent book <a href="http://www.amazon.com/dp/0143115715"><i>What's Math Got To Do With It?</i></a> (subtitle: <i>How parents and teachers can help children learn to love their least favorite subject</i>)
+ opens in the real-life classroom of an "amazing and unusual teacher".  
+Her class is tackling a math problem as a group challenge.  The 
+atmosphere is animated and jovial, the students jump up eagerly to offer
+ ideas and debate approaches, and "within ten minutes, the class has 
+solved the problem by drawing from trigonometry and geometry, using 
+similar triangles and tangent lines".</p>
+
+<p>The book goes on to describe how most students despise mathematics, 
+and grow up to become math-illiterate adults who use only "folk 
+mathematics" instead of anything they were taught in school.  The author
+ presents the enthusiasm-building activities of the "amazing and unusual
+ teacher" as the ideal form of math education, and suggests that if 
+everyone were taught in such an engaging social environment, the public 
+would come to love math and integrate it into their lives.</p>
+
+<p>I disagree.  I suggest that students are <i>right</i> to recoil from 
+trigonometry and geometry, similar triangles and tangent lines.  This 
+style of mathematics is about translating a problem into <strong>symbolic abstractions</strong>, and then performing meaningless <strong>symbolic manipulation</strong> to get an answer.  Regardless of how it's taught, most people will <i>never</i> be comfortable entering this level of abstraction in order to explore the problems of their lives.</p>
+
+<p>They may not need to.  Symbolic methods were invented in another era,
+ tools intended to interface with pen and paper.  We now live in an era 
+of machines that can depict concrete visual representations of a 
+problem, machines that can quickly iterate through enormous systems of 
+differential equations, machines that can instantaneously draw plots for
+ visual inspection, machines that can recalculate and redraw at the 
+user's whim.</p>
+
+<p>Why are we stuck teaching symbols?</p>
+
+<p>Imagine:  Instead of writing abstract equations, we draw a model to 
+simulate in software.  Instead of trying to make sense of algebraic 
+results, we interactively explore parameter spaces using graphical 
+visualizations.  Instead of getting "an answer", we get an 
+understanding.  And instead of limiting our scope to that tiny subset of
+ problems which can be solved analytically, we let our curiosity run 
+wild, asking "what if" about anything we can model.</p>
+
+<p>Such software will enable people to answer questions that affect 
+their lives, without having to construct arcane abstractions.  My hope 
+is that this software will become as ubiquitous as the pocket calculator
+ used to be.  It will be the calculator of the next century.</p>
+
+
+<h2>Similar Triangles and Tangent Lines</h2>
+
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/BookFigure1.png" alt=""></p>
+<p>The math problem which enraptured the classroom above is as follows:</p>
+
+<div class="problem">
+<p>A skateboarder holds on to the merry-go-round pictured to the right. 
+ The platform of the merry-go-round has a 7-foot radius and makes a 
+complete turn every 6 seconds.  The skateboarder lets go at the 2 
+o'clock position in the picture, at which time she is 30 feet from the 
+padded wall.  How long will it take the skateboarder to hit the wall?</p>
+</div>
+
+<p>Set aside for a moment that nobody would ever be faced with this 
+particular problem as stated, nor care about the result.  We will use 
+the situation it describes to explore more interesting questions.</p>
+
+<p>But first, the conventional solution, as provided by the book.  You do not need to read this — merely note how <strong>abstract</strong>, <strong>arcane</strong>, and <strong>contrived</strong> it is.</p>
+
+<div class="solution">
+<p>The first step is to find out how far the skateboarder travels after 
+letting go.  In other words, we need to figure out the distance AB in 
+the drawing to the right.</p>
+
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/BookFigure2.png" alt=""></p>
+
+<p>To do this we first need to work out what the angle θ is so we can 
+use the properties of right triangles.  To do this, draw the line <i>h</i>
+ that passes through the center of the merry-go-round and meets the 
+padded wall at a right angle.   Since the skateboarder is at the 
+"2-o'clock" position, whcih is 1/6 of the way around a clock, the angle α
+ is 1/6 of 360°.  So α = 60°.  The angle β = 90°, since a tangent line 
+of a circle always meets the radius at a right angle.  Finally, α + β + θ
+ = 180, since they are same-side interior angles between the parallel 
+lines <i>h</i> and <i>l</i>.  Therefore θ = 30°.  This means that 
+triangle ABC is a 30-60-90 triangle!  Using the side relations of 
+30-60-90 triangles, we find:</p>
+
+<p>BC = 30/sqrt(3) = 10 sqrt(3) feet</p>
+
+<p>and</p>
+
+<p>AB = 20 sqrt(3) feet</p>
+
+<p>So now we know how far the skateboarder travels.  The next step is to
+ figure out how fast she is traveling.  The merry-go-round makes a 
+complete turn every 6 seconds.  In a complete turn, the skateboarder 
+travels the entirety of the circumference, which is </p>
+
+<p>C = 2π (7) = 43.98 ft.</p>
+
+<p>So the skateboarder is traveling at 43.98 / 6 = 7.330 feet per second.</p>
+
+<p>Since</p>
+
+<p>(distance) = (rate)(time)</p>
+
+<p>then</p>
+
+<p>(time) = (distance)/(rate)</p>
+
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/BrainFigure.png" alt=""></p>
+
+<p>So the time it takes the skateboarder to reach the wall is</p>
+
+<p>20 sqrt(3) / 7.330 = 4.726 seconds</p>
+
+</div>
+
+<p><strong>Abstract.</strong>  Our picture, which used to depict only 
+objects that were meaningful to the problem (carousel, wall, 
+skateboarder), has become cluttered with extraneous lines and symbols, 
+like a diagram in an anatomy textbook.  The solution is performed in 
+terms of these symbols, not meaningful values.</p>
+<p><strong>Arcane.</strong>  Mysterious rules are recited like sacred edicts:  <i>A tangent line of a circle always meets the radius at a right angle.</i>  <i>Same-side interior angles between the parallel lines sum to 180°.</i></p>
+<p><strong>Contrived.</strong>  Behold the convenient appearance of the 30-60-90 triangle.</p>
+
+<p>All this, and still — the solution is <strong>wrong</strong>.  The 
+three-decimal-point precision is already laughable, given the precisions
+ of the lengths and velocities in the problem.  But what about the size 
+of the skater herself?  (An arm length of 2 feet adds a lot to the 
+carousel's 7-foot radius!)  What about deceleration of the skater due to
+ friction?  (Can she really coast for 30 feet without losing most of her
+ momentum?)  What about the non-constant velocity of the carousel, which
+ is presumably being pushed by a friend at some interval?</p>
+
+<p>We conventionally ignore such "non-idealities".  Not because they 
+aren't important, but because they complicate our symbolic manipulation,
+ or even render it impossible.</p>
+
+
+<h2>Model, Watch, Learn</h2>
+
+<p>My solution to the problem is as follows.  Click it to watch.</p>
+
+<div class="animation"><object type="application/x-shockwave-flash" data="Simulation%20as%20a%20Practical%20Tool_files/main_1.swf" height="500" width="600">
+         <param name="movie" value="Animations/main_1.lzx.swf9.swf?lzproxied=false">
+         <param name="quality" value="high"><param name="scale" value="noscale">
+         <param name="salign" value="LT"><param name="menu" value="false">
+         </object></div>
+
+<p>This is a software simulation of the situation described in the 
+problem.  This gives the same result as the analysis above, so it 
+clearly must be a valid solution.</p>
+
+<p>Furthermore, this solution is <strong>not abstract</strong>: only concrete, meaningful objects are shown.  It is <strong>not arcane</strong>:
+ the only "rule" used is that the skateboarder maintains her speed and 
+direction after letting go of the carousel; the rest of the model is 
+physically obvious.  It is <strong>not contrived</strong>:  adjust any parameter of the original problem, and the simulation will provide the correct answer just as easily.</p>
+
+<p>Because this solution was intended to match the analytic one, 
+inaccuracies and all, it doesn't incorporate any "non-idealities".  But 
+it could, and could easily.  Many non-idealities, such as gravity, 
+friction, and drag, are fairly simple to incorporate into iterative 
+models.  (This is because iterative methods mimic how nature itself 
+solves these problems, by integrating forces.)  We traditionally avoid 
+these non-idealities only because we have trouble "shortcutting" to the 
+solution with symbolic trickery.</p>
+
+<p>I implemented this example by "writing code".  But to be clear, I am 
+absolutely not advocating "code" as the means for solving such problems.
+  I envision a tool that allows people to model the situation directly 
+and concretely, perhaps by simply drawing a picture.  The examples in 
+this essay are only meant to show what a solution might look like, not 
+how to make it.</p>
+
+<p>Now, let's make the problem more interesting.</p>
+
+
+<h2>A Solution in Context</h2>
+
+<p>The simulation above gives a wonderfully visual interpretation of the
+ solution.  But one can't help but notice that there's not much solution
+ to visualize — the result is just a number.  This implies that the <i>question isn't very interesting</i>.</p>
+
+<p>An interesting problem should bring delight when the solution is 
+revealed, like a mystery story.  As with a mystery story, the delight 
+comes from achieving an <strong>understanding</strong>.  How does "4.72 seconds" help us understand anything about the skateboarder's situation?  Why is that number even meaningful?</p>
+
+<p>Here's a characteristic that is intrinsically interesting:  <strong>optimality</strong>.  Even when it doesn't objectively matter, people <i>care</i>
+ about finding the fastest route home from work, or the apartment with 
+the most square footage, or the best deal on orange juice in the grocery
+ store.  <i>People like to optimize.</i>  So, let's ask this question:</p>
+
+<div class="problem">
+<p>In order to reach the wall as quickly as possible, where should the skateboarder let go?</p>
+</div>
+
+<p>Astonishingly, the standard approach to this problem requires <i>calculus</i>,
+ which few students learn and fewer use outside the classroom.  
+Optimization is one of the most important uses of mathematics — 
+shouldn't even our most elementary mathematical tools support it?  <a id="click_to_see_analytic_optimal_solution" target="_self" href="#" onclick="showAnalyticOptimalSolution();return false;">Click to see a conventional solution.</a><span id="clicked_analytic_optimal_solution" style="display:none;">A conventional solution:</span></p>
+
+<div id="analytic_optimal_solution" class="solution" style="display:none;">
+<p>Consider the figure at the right.  We want to find the θ that 
+minimizes the time to the wall.  Because the velocity is the same no 
+matter where she lets go, that's the same as minimizing the distance the
+ skateboarder travels, which is AB.</p>
+<p class="sidenote"><img src="Simulation%20as%20a%20Practical%20Tool_files/OptimalFigure.png" alt=""></p>
+<p>We know that</p>
+<p class="equation">AC = <i>h</i> - DA</p>
+<p>and</p>
+<p class="equation">DA = <i>r</i> sin &amp;theta</p>
+<p>Thus</p>
+<p class="equation">AC = <i>h</i> - <i>r</i> sin θ</p>
+<p>Because there's a right angle at C, we know that</p>
+<p class="equation">AC = AB cos θ</p>
+<p>Thus,</p>
+<p class="equation">AB = (<i>h</i> - <i>r</i> sin θ) / cos θ<br>AB = <i>h</i> sec &amp;theta - <i>r</i> tan θ</p>
+<p>In order to find the θ* that minimizes AB, we take the derivative of this expression with respect to θ:</p>
+<p class="equation">dAB/dθ = (<i>h</i> sin θ / cos^2 θ) - (<i>r</i> / cos^2 θ)</p>
+<p>and solve for the θ* where the derivative vanishes:</p>
+<p class="equation">(<i>h</i> sin θ* / cos^2 θ*) - (<i>r</i> / cos^2 θ*) = 0</p>
+<p>Multiplying both sides by cos^2 θ* gives</p>
+<p class="equation"><i>h</i> sin θ* - <i>r</i> = 0</p>
+<p>And we have</p>
+<p class="equation">θ* = arcsin(<i>r</i> / <i>h</i>)</p>
+<p>Plugging in the values from the earlier problem, <i>r</i> = 7 ft. and <i>h</i> = 33.5 ft., we find:</p>
+<p class="equation">θ* = 12.06°</p>
+<p>which corresponds to a clock position of about 2:36.</p>
+
+</div>
+
+
+<p>My solution to this problem is as follows.  Watch the plot fill in, 
+and then try moving your mouse around the plot to see different 
+trajectories.</p>
+
+<div class="animation"><object type="application/x-shockwave-flash" data="Simulation%20as%20a%20Practical%20Tool_files/main_2.swf" height="500" width="600">
+         <param name="movie" value="Animations/main_2.lzx.swf9.swf?lzproxied=false">
+         <param name="quality" value="high"><param name="scale" value="noscale">
+         <param name="salign" value="LT"><param name="menu" value="false">
+         </object></div>
+
+<p>This solution required no changes to the model — we merely sweep one 
+of the parameters and find the minimum.  But look at the beautiful 
+result.  The result is no longer just a number — it's a point on a plot.
+  And every point on that plot is tied to a visual trajectory.  We have <strong>context</strong>.  We aren't merely given the optimal angle; we are presented with <i>why</i> it's the optimal angle, because we can see all the trajectories for all the angles.  We can <i>understand the situation</i>.</p>
+
+<p>Notice that if the skateboarder lets go anywhere on the left side of 
+the carousel, she'll never reach the wall at all!  (This is the red half
+ of the plot.)  Did you realize that this would happen when you read the
+ problem statement?  Would you have noticed it in the analytic 
+solution's pile of equations?  Most likely, you would have only noticed 
+it if the problem explicitly asked us to solve for it.  Modeling <i>broadens our view</i> of a situation, allowing us to see things that we don't yet know to look for.</p>
+
+<p>Now, look at that optimal trajectory again:</p>
+
+<div class="animation"><img src="Simulation%20as%20a%20Practical%20Tool_files/Optimal.png" alt="" height="500" width="600"></div>
+
+<p>There's a symmetry here which is very conspicuous.  The trajectory appears to hit the wall <i>directly above</i> the carousel's center.  And after bouncing off, it appears to pass tangent to the other side of the carousel.</p>
+
+<p>There's a lot that we could explore here.  But upon seeing this, a 
+real skateboarder would naturally think of a sweet trick:  let go of the
+ carousel, bounce off the wall, <i>grab back on</i> to the carousel on the other side, and go around again:</p>
+
+<div class="animation"><object type="application/x-shockwave-flash" data="Simulation%20as%20a%20Practical%20Tool_files/main_3.swf" height="500" width="600">
+         <param name="movie" value="Animations/main_3.lzx.swf9.swf?lzproxied=false">
+         <param name="quality" value="high"><param name="scale" value="noscale">
+         <param name="salign" value="LT"><param name="menu" value="false">
+         </object></div>
+
+<p>Let's take that idea and make the problem more interesting.</p>
+
+<h2>A Freehand Problem</h2>
+
+<p>Contrived school problems are filled with straight lines and simple 
+curves.  But real life is more varied, more fun.  What if our wall had a
+ more artistic shape?</p>
+
+<div class="problem">
+<p>With curved wall below, where should the skateboarder let go so that she can bounce and grab back on?</p>
+</div>
+
+<p>The solution:</p>
+
+<div class="animation"><object type="application/x-shockwave-flash" data="Simulation%20as%20a%20Practical%20Tool_files/main_4.swf" height="500" width="600">
+         <param name="movie" value="Animations/main_4.lzx.swf9.swf?lzproxied=false">
+         <param name="quality" value="high"><param name="scale" value="noscale">
+         <param name="salign" value="LT"><param name="menu" value="false">
+         </object></div>
+
+<p>This is a fascinating result.  There are now <i>three</i> places where the skateboarder can let go and rejoin the carousel!  Furthermore, those places correspond to <i>local minima and maxima</i> of the time to the wall.  Would you ever have predicted that?</p>
+
+<p>Note that this problem <strong>cannot be solved analytically</strong>.  Why?  Because there is no formula for the shape of the wall.  I simply drew it so it <i>looked good</i>.
+  And so it is with many phenomena that we care about in the real world —
+ their properties are what they are for artistic or natural reasons, not
+ because they can be conveniently expressed analytically.  If our 
+mathematical tools can't deal with the <i>objects we care about</i>, then we are stuck in the land of artificial, contrived problems.  No wonder people find math irrelevant!</p>
+
+<p>The unexpected multiple solution to this problem inspires a new problem, the most interesting one of all.</p>
+
+
+<h2>A Design Problem</h2>
+
+<p>In the previous two problems, the skateboarder could only bounce off 
+the wall at very specific spots if she wanted to rejoin the carousel.  
+Can we make it easier on her?</p>
+
+<div class="problem">
+<p>Can we <i>design</i> a wall such that the skateboarder can let go <i>anywhere</i>, bounce off, and perfectly rejoin the carousel?</p>
+</div>
+
+<p>This might be easy if we fully understood the criteria for bouncing 
+and rejoining.  But we don't yet — we only have hints.  So let's allow 
+the simulation to design the wall for us:</p>
+
+<div class="animation"><object type="application/x-shockwave-flash" data="Simulation%20as%20a%20Practical%20Tool_files/main_5.swf" height="500" width="600">
+         <param name="movie" value="Animations/main_5.lzx.swf9.swf?lzproxied=false">
+         <param name="quality" value="high"><param name="scale" value="noscale">
+         <param name="salign" value="LT"><param name="menu" value="false">
+         </object></div>
+
+<p>It's a circle.  But why?  Let's look at the three examples — the 
+straight wall, the curvy wall, and the circular wall.  What do the 
+bounce-and-rejoin points all have in common?  With a little thought, we 
+can see that these are the points where <i>a perpendicular line from the wall intersects the center of the carousel</i>:</p>
+
+<div><img src="Simulation%20as%20a%20Practical%20Tool_files/Perpendicular.png" alt=""></div>
+
+<p>Because every point on the circular wall has a normal which goes 
+through the center of the carousel, the skater can hit the circle 
+anywhere and bounce back to the right place.</p>
+
+
+<h2>Summary</h2>
+
+<p>The four problems above, respectively, are examples of how a 
+simulation tool might allow people to solve problems in a way that is:</p>
+
+<p><strong>Concrete.</strong>  Modeling lets us set up and solve 
+problems in a concrete domain, without translating to and from 
+abstractions.  Keeping the solution grounded in the problem domain makes
+ it palatable to many more people, makes it easier to reality-check, and
+ encourages exploration of related problems.</p>
+
+<p><strong>In context.</strong>  Simulation and visualization give us a 
+broader understanding of the situation.  Simulation shows us not just 
+the final answer, but the path taken to get there.  Visualization 
+encourages us to see the solution as a point on a plot, not a number in 
+isolation.</p>
+
+<p><strong>Unrestricted.</strong>  Simulation handles non-analytic 
+situations with ease. The conditions of a problem do not need to be 
+contrived or compromised for a convenient symbolic representation.</p>
+
+<p><strong>Generative.</strong>  A simulation tool can be used for 
+design, not merely analysis.  Guided by human creativity and insight, 
+the tool can construct designs and help explore their implications.</p>
+
+
+<h2>To Do</h2>
+
+<p>There are four critical issues that are not addressed by this essay.</p>
+
+<p><strong>The tool.</strong>  I am proposing a software tool that 
+allows people to pose and explore problems directly and concretely, a 
+tool that should become as ubiquitous as the pocket calculator.  What is
+ this tool?  What would its interface look like?  How could it be 
+designed so problems can be posed and solved <i>quickly and casually</i>?</p>
+
+<p><strong>Relevance.</strong>  The tool and these methods should allow 
+people to explore problems relevant to their lives.  The example I 
+followed here was almost a straw man, in that it's a school exercise — a
+ problem that nobody would care to solve anyway.  We need to compile a 
+corpus of real, motivating problems — problems that people desperately 
+want to explore, but currently cannot.</p>
+
+<p><strong>Universality.</strong>  The example I explored here was a 
+physics problem, which has a convenient visual representation and 
+physically intuitive rules for evolving the system.  Most of the 
+problems in people's lives cannot be expressed as physics problems.  How
+ can non-physical problems be modeled concretely, visually, tangibly?  
+How can we specify the rules for iterating these systems without 
+succumbing to abstraction?</p>
+
+<p><strong>Benefits of symbols.</strong>  Many scientific disciplines 
+currently strike an uneasy balance between symbolic and numerical 
+methods, aware of the pitfalls of both.  The benefits of analytic 
+methods can be:</p>
+<p class="indented"><b>Practical,</b> such as finding with certainty all possible solutions to a problem.</p>
+<p class="indented"><b>Cognitive.</b> Some teachers claim that automated solvers can be crutches that <a href="http://arxiv.org/pdf/0712.1187v1">impair students' ability to reason</a>.</p>
+<p class="indented"><b>Social.</b>  You can discuss or google a formula 
+to learn from others who have navigated similar territory, but how do 
+you look up or make reference to a plot or a process?</p>
+<p>How relevant are these analytic strengths to the sorts of 
+problem-solving we are concerned with here, and how can a simulation 
+tool match or make up for them?</p>
+
+<p>And on the other hand, how much does it matter if simulation falls short of symbolic methods in some respects?  <strong>Most people use no mathematical methods at all beyond arithmetic.</strong>
+  So, any high-level mathematical tool that could gain any following 
+could be considered a success.  Anything is better than nothing.</p>
+
+<p>But I believe that a truly revolutionary simulation tool can beat symbolic methods at their own game.</p>
+
+
+</body></html>
