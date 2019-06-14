@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>logarithm operations -- Sage</title>
+        
+        
+        <link type="text/css" rel="stylesheet" href="Logarithm%20operations_Sage_files/main.css">
+        
+        
+        <script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery-1.js"></script>
+        
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="Logarithm%20operations_Sage_files/jquery-ui-1.css">
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery-ui-1.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="Logarithm%20operations_Sage_files/farbtastic.css" type="text/css">
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/farbtastic.js"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery.js"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery_002.js"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery_003.js"></script>
+<link rel="stylesheet" href="Logarithm%20operations_Sage_files/jPicker-1.css" type="text/css">
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jpicker-1.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="Logarithm%20operations_Sage_files/colorpicker.css">
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/colorpicker.js"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/ui.js"></script>
+
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/main.js"></script>
+
+
+<!-- jsMath - typeset mathematics -->
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jsmath.js"></script><script src="Logarithm%20operations_Sage_files/jsMath-easy-load.js"></script><script src="Logarithm%20operations_Sage_files/jsMath.js"></script>
+
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/sage3d.js"></script>
+
+<!-- Jmol - embedded 3D graphics -->
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/Jmol.js"></script>
+<!-- This must stay in head -->
+<script>jmolInitialize("/java/jmol");jmolSetCallback("menuFile","/java/jmol/appletweb/SageMenu.mnu");</script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/tiny_mce.js"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/jquery_004.js" charset="utf-8"></script>
+<script type="text/javascript" src="Logarithm%20operations_Sage_files/tinymce.js"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/en_002.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/langs/en.js',0);"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/editor_template.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/themes/advanced/editor_template.js',1);"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/en.js"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/editor_plugin.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/plugins/table/editor_plugin.js',2);"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/editor_plugin_002.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/plugins/searchreplace/editor_plugin.js',3);"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/editor_plugin_003.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/plugins/paste/editor_plugin.js',4);"></script><script type="text/javascript" src="Logarithm%20operations_Sage_files/editor_plugin_004.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://192.168.194.129/javascript/tiny_mce/plugins/autosave/editor_plugin.js',5);"></script>
+
+
+<script type="text/javascript">user_name= "admin";</script>
+
+<script type="text/javascript">
+    worksheet_filename = "admin/6";
+    worksheet_name = 'logarithm operations';
+    server_ping_while_alive();
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="Logarithm%20operations_Sage_files/master.js"></script>
+    <style type="text/css">#jsMath_test {font-size:200%}
+</style><style type="text/css">.math {font-family: serif; font-style: normal; font-weight: normal}
+.typeset {font-family: serif; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; white-space: normal}
+.typeset .normal {font-family: serif; font-style: normal; font-weight: normal}
+div.typeset {text-align: center; margin: 1em 0px}
+span.typeset {text-align: left}
+.typeset span {text-align: left; border: 0px; margin: 0px; padding: 0px}
+a .typeset img, .typeset a img {border: 0px; border-bottom: 1px solid blue;}
+.typeset .size0 {font-size: 50%}
+.typeset .size1 {font-size: 60%}
+.typeset .size2 {font-size: 70%}
+.typeset .size3 {font-size: 85%}
+.typeset .size4 {font-size: 100%}
+.typeset .size5 {font-size: 120%}
+.typeset .size6 {font-size: 144%}
+.typeset .size7 {font-size: 173%}
+.typeset .size8 {font-size: 207%}
+.typeset .size9 {font-size: 249%}
+.typeset .cmr10 {font-family: jsMath-cmr10, serif}
+.typeset .cmbx10 {font-family: jsMath-cmbx10, jsMath-cmr10}
+.typeset .cmti10 {font-family: jsMath-cmti10, jsMath-cmr10}
+.typeset .cmmi10 {font-family: jsMath-cmmi10}
+.typeset .cmsy10 {font-family: jsMath-cmsy10}
+.typeset .cmex10 {font-family: jsMath-cmex10}
+.typeset .textit {font-family: serif; font-style: italic}
+.typeset .textbf {font-family: serif; font-weight: bold}
+.typeset .link {text-decoration: none}
+.typeset .error {font-size: 90%; font-style: italic; background-color: #FFFFCC; padding: 1px; border: 1px solid #CC0000}
+.typeset .blank {display: -moz-inline-box; overflow: hidden; border: 0px none; width: 0px; height: 0px}
+.typeset .spacer {}
+#jsMath_hiddenSpan {visibility: hidden; position: absolute; top: 0px; left: 0px; line-height: normal; text-indent: 0px}
+#jsMath_message {position: fixed; bottom: 1px; left: 2px; background-color: #E6E6E6; border: solid 1px #959595; margin: 0px; padding: 1px 8px; z-index: 102; color: black; font-size: small; width: auto}
+#jsMath_panel {position: fixed; bottom: 1.75em; right: 1.5em; padding: .8em 1.6em; background-color: #DDDDDD; border: outset 2px; z-index: 103; width: auto; color: black; font-size: 10pt; font-style: normal}
+#jsMath_panel .disabled {color: #888888}
+#jsMath_panel .infoLink {font-size: 85%}
+#jsMath_panel * {font-size: inherit; font-style: inherit; font-family: inherit; line-height: normal}
+#jsMath_panel div {background-color: inherit; color: inherit}
+#jsMath_panel span {background-color: inherit; color: inherit}
+#jsMath_panel td {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel tr {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel table {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit; height: auto; width: auto}
+#jsMath_button {position:fixed; bottom:1px; right:20px; background-color:white; border: solid 1px #959595; margin:0px; padding: 0px 3px 1px 3px; z-index:102; color:black; text-decoration:none; font-size:x-small; width:auto; cursor:hand;}
+#jsMath_button * {padding: 0px; border: 0px; margin: 0px; line-height: normal; font-size: inherit; font-style: inherit; font-family: inherit}
+#jsMath_global {font-style: italic}
+#jsMath_noFont .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: small; width: auto}
+#jsMath_noFont .link {padding: 0px 5px 2px 5px; border: 2px outset; background-color: #E8E8E8; color: black; font-size: 80%; width: auto; cursor: pointer}
+#jsMath_PrintWarning .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: x-small; width: auto}
+@media print {#jsMath_button {display: none}
+#jsMath_Warning {display: none}
+}
+@media screen {#jsMath_PrintWarning {display: none}
+}
+.typeset .scale {font-size: 115%}
+</style><style type="text/css">.typeset .cmr10 {font-family: serif}
+.typeset .italic {font-style: italic}
+.typeset .bold {font-weight: bold}
+.typeset .lucida {font-family: 'lucida sans unicode'}
+.typeset .arial {font-family: 'Arial unicode MS'}
+.typeset .cal {font-family: 'Script MT', 'Script MT Bold', cursive}
+.typeset .arrows {font-family: 'Arial unicode MS'}
+.typeset .arrow1 {font-family: 'Arial unicode MS'}
+.typeset .arrow1a {font-family: 'Arial unicode MS'; position:relative; top:.05em;left:-.15em; margin-right:-.15em}
+.typeset .arrow2 {font-family: 'Arial unicode MS'; position:relative; top:-.1em;}
+.typeset .arrow3 {font-family: 'Arial unicode MS'; margin:.1em}
+.typeset .symbol {font-family: 'Arial unicode MS'}
+.typeset .symbol2 {font-family: 'Arial unicode MS'}
+.typeset .delim1 {font-family: 'Times New Roman'; font-size: 133%; position:relative; top:.7em}
+.typeset .delim1a {font-family: 'Lucida sans unicode'; font-size: 133%; position:relative; top:.8em}
+.typeset .delim1b {font-family: 'Arial unicode MS'; font-size: 133%; position:relative; top:.8em}
+.typeset .delim2 {font-family: 'Times New Roman'; font-size: 180%; position:relative; top:.75em}
+.typeset .delim2a {font-family: 'Lucida sans unicode'; font-size: 180%; position:relative; top:.8em}
+.typeset .delim2b {font-family: 'Arial unicode MS'; font-size: 180%; position:relative; top:.8em}
+.typeset .delim3 {font-family: 'Times New Roman'; font-size: 250%; position:relative; top:.725em}
+.typeset .delim3a {font-family: 'Lucida sans unicode'; font-size: 250%; position:relative; top:.775em}
+.typeset .delim3b {font-family: 'Arial unicode MS'; font-size: 250%; position:relative; top:.8em}
+.typeset .delim4 {font-family: 'Times New Roman'; font-size: 325%; position:relative; top:.7em}
+.typeset .delim4a {font-family: 'Lucida sans unicode'; font-size: 325%; position:relative; top:.775em}
+.typeset .delim4b {font-family: 'Arial unicode MS'; font-size: 325%; position:relative; top:.8em}
+.typeset .delimx {font-family: Symbol; position:relative; top:.2em}
+.typeset .greek {font-family: 'Times New Roman'}
+.typeset .igreek {font-family: 'Times New Roman'; font-style:italic}
+.typeset .bgreek {font-family: 'Times New Roman'; font-weight:bold}
+.typeset .bigop1 {font-family: 'Arial unicode MS'; font-size: 130%; position: relative; top: .7em; margin:-.05em}
+.typeset .bigop1a {font-family: 'Arial unicode MS'; font-size: 110%; position: relative; top: .85em;}
+.typeset .bigop1b {font-family: 'Arial unicode MS'; font-size: 180%; position: relative; top: .6em}
+.typeset .bigop1c {font-family: 'Arial unicode MS'; font-size: 85%; position: relative; top: 1em}
+.typeset .bigop2 {font-family: 'Arial unicode MS'; font-size: 230%; position: relative; top: .6em; margin:-.05em}
+.typeset .bigop2a {font-family: 'Arial unicode MS'; font-size: 185%; position: relative; top: .75em}
+.typeset .bigop2b {font-family: 'Arial unicode MS'; font-size: 275%; position: relative; top: .55em}
+.typeset .bigop2c {font-family: 'Arial unicode MS'; font-size: 185%; position: relative; top: 1em; margin-right:-.1em}
+.typeset .wide1 {font-size: 67%; position: relative; top:-.5em;}
+.typeset .wide2 {font-size: 110%; position: relative; top:-.2em;}
+.typeset .wide3 {font-size: 175%;}
+.typeset .wide1a {font-family: 'Times New Roman'; font-size: 75%; position: relative; top:-.5em}
+.typeset .wide2a {font-family: 'Times New Roman'; font-size: 133%; position: relative; top:-.2em}
+.typeset .wide3a {font-family: 'Times New Roman'; font-size: 200%; position: relative; top:-.1em}
+.typeset .root {font-family: 'Arial unicode MS'; margin-right:-.075em}
+.typeset .accent {font-family: 'Arial unicode MS'; position:relative; top:.05em; left:.15em}
+.typeset .iaccent {font-family: 'Arial unicode MS'; position:relative; top:.05em; left:.15em; font-style:italic}
+.typeset .baccent {font-family: 'Arial unicode MS'; position:relative; top:.05em; left:.15em; font-weight:bold}
+</style><style type="text/css">.typeset .accent {font-family: Arial unicode MS; position:relative; top:.05em; left:.05em}
+</style></head><script id="gwScript" type="text/javascript">                        function gwCall(method, argStr)                             
+      {                                                           
+         var gwProxy = window.document.getElementById('gwProxy'); 
+         if (gwProxy)                                             
+         {                                                        
+            gwProxy.setAttribute('gwMethod', method);             
+            gwProxy.setAttribute('gwArgStr', argStr);             
+            var e = document.createEvent('MouseEvents');          
+            e.initEvent('click',true,true);                       
+            gwProxy.dispatchEvent(e);                             
+         }                                                        
+      }                                                           
+                                                                  
+      function jsCall()                                           
+      {                                                           
+         var jsProxy = document.getElementById('jsProxy');        
+         if (jsProxy)                                             
+         {                                                        
+            var jsCode = jsProxy.getAttribute('jsCode');          
+            eval(jsCode);                                         
+         }                                                        
+      }                                                           
+                                                                  
+      function Gateway()                                          
+      {                                                           
+         var _P4r4m5_ = {};                                       
+         this.addParam = function(name,value)                     
+         {                                                        
+            _P4r4m5_[escape(name)] = escape(value);               
+         }                                                        
+                                                                  
+         this.callName = function(callName)                       
+         {                                                        
+            var paramStr = '';                                    
+            for (name in _P4r4m5_)                                
+            {                                                     
+               paramStr = paramStr+                               
+                          ((paramStr == '') ? '' : '&')+          
+                          name+'='+_P4r4m5_[name];                
+            }                                                     
+            gwCall(callName, paramStr);                           
+         }                                                        
+      }                                                           
+                                                                  
+   function showIFrame(name, url)                                 
+      {                                                           
+         frames[name].location.href = url;                        
+      }                                                           
+                                                                  
+      function createSrcScriptElement(srcPath)                    
+      {                                                           
+         var js = document.createElement('script');               
+         js.setAttribute('type', 'text/javascript');              
+         js.setAttribute('src', srcPath);                         
+         document.getElementsByTagName('head')[0].appendChild(js);
+      }                                                           
+                                                                  
+      function createInlineScriptElement(escapedJsCode)           
+      {                                                           
+         try{                                                     
+            var js;                                               
+            if(document.standardCreateElement)                    
+               js = document.standardCreateElement('script');     
+            else                                                  
+               js = document.createElement('script');             
+            js.setAttribute('type', 'text/javascript');           
+            js.text = unescape(escapedJsCode);                    
+            document.getElementsByTagName('head')[0].appendChild(js); 
+         }																			
+         catch(e){																
+            //alert(document.createElement);                        
+            //alert('ERROR: createInlineScriptElement(): '+e);      
+         }																			
+      }                                                           
+                                                                  
+      function invokeInGuiThread(callName, argPtr)                
+      {                                                           
+         var gwObj = new Gateway();                               
+         gwObj.addParam('argPtr',argPtr);                         
+         gwObj.callName(callName);                                
+      }                                                           
+</script><body id="user-worksheet-index" class="worksheet-online active-worksheet-page"><div title="" style="visibility: hidden;" id="jsMath_message"></div><div title=" Open jsMath Control Panel " id="jsMath_button"><span onclick="jsMath.Controls.Panel()">jsMath</span></div><div style="display: none;" id="jsMath_panel"></div><div style="visibility: hidden; position: absolute; top: 0pt; left: 0pt; border: 0pt none; padding: 0pt; margin: 0pt;" id="jsMath_Hidden"></div>
+        
+        <div id="header">
+            
+            <div id="top-bar">
+                <div id="banner">
+                    <a class="banner" href="http://nb.sagemath.org/">
+                        <img src="Logarithm%20operations_Sage_files/sagenb.png" alt="Sage" align="top"><span>The Sage Notebook</span>
+                    </a>
+                    <span class="ping" id="ping">Searching for Sage server...</span>
+                    <div class="version">
+                        Version 4.5.2
+                    </div>
+                </div>
+                
+<div id="main-controls" class="controls">
+    <ul>
+        <li class="username">admin</li>
+        
+        <li><a id="toggle-link" title="Toggle the top bar" onclick="$('#worksheet-bar').toggle()">Toggle</a></li>
+        <li><a title="Back to your personal worksheet list" href="http://192.168.194.129/home/admin">Home</a></li>
+        
+        <li><a title="Browse the published worksheets" href="http://192.168.194.129/pub">Published</a></li>
+        <li><a title="View a log of recent computations" href="#" onclick="history_window()">Log</a></li>
+        
+        <li><a title="Change account settings including password" href="http://192.168.194.129/settings">Settings</a></li>
+        <li><a title="Documentation" href="#" onclick="help()">Help</a></li>
+        <li><a title="Report a problem or submit a bug to improve Sage" href="#" onclick="bugreport()">Report a Problem</a></li>
+        <li><a title="Log out of the Sage notebook" href="http://192.168.194.129/logout">Sign out</a></li>
+        
+    </ul>
+</div>
+
+            </div>
+            
+        </div>
+        <div id="main">
+            
+<div id="worksheet-bar">
+    <div class="worksheet_title">
+        <a id="worksheet_title" class="worksheet_title" onclick="rename_worksheet(); return false;" title="Click to rename this worksheet">
+            logarithm operations
+        </a>
+        <div><span class="lastedit">
+<span class="lastedit">last edited on August 24, 2010 05:05 PM by admin</span></span></div>
+        
+    </div>
+    <div id="save-discard-buttons">
+        
+        <button name="button_save" title="Save changes" onclick="save_worksheet();">Save</button><button title="Save changes and close window" onclick="save_worksheet_and_close();" name="button_save">Save &amp; quit</button><button title="Discard changes to this worksheet" onclick="worksheet_discard();">Discard &amp; quit</button>
+        
+    </div>
+    
+    <div id="worksheet-menu">
+        <select class="worksheet" onchange="go_option(this);" id="file-menu">
+            <option title="Select a file related function" value="" selected="selected">File...</option>
+            <option title="Load a new worksheet stored in a file" value="upload_worksheet_button();">Load worksheet from a file...</option>
+            <option title="Create a new worksheet" value="new_worksheet();">New worksheet</option>
+            <option title="Save this worksheet to an sws file" value="download_worksheet();">Save worksheet to a file...</option>
+            <option title="Print this worksheet" value="print_worksheet();">Print</option>
+            <option title="Rename this worksheet" value="rename_worksheet();">Rename worksheet</option>
+            <option title="Copy this worksheet" value="copy_worksheet();">Copy worksheet</option>
+            <option title="Move this worksheet to the trash" value="delete_worksheet('admin/6');">Delete worksheet</option>
+        </select>
+
+        <select class="worksheet" onchange="go_option(this);" id="action-menu">
+            <option title="Select a worksheet function" value="" selected="selected">Action...</option>
+            <option title="Interrupt currently running calculations, if possible" value="interrupt();">Interrupt</option>
+            <option title="Restart the worksheet process" value="restart_sage();">Restart worksheet</option>
+            <option title="Quit the worksheet process" value="save_worksheet_and_close();">Save and quit worksheet</option> 
+            <option value="">---------------------------</option>
+            <option title="Evaluate all input cells in the worksheet" value="evaluate_all();">Evaluate All</option>
+            <option title="Hide all output" value="hide_all();">Hide All Output</option>
+            <option title="Show all output" value="show_all();">Show All Output</option>
+            <option title="Delete all output" value="delete_all_output();">Delete All Output</option>
+            <option value="">---------------------------</option>
+            <option title="Switch to single-cell mode" value="slide_mode();">One Cell Mode</option>
+            <option title="Switch to multi-cell mode" value="cell_mode();">Multi Cell Mode</option> 
+        </select>
+        <select class="worksheet" onchange="handle_data_menu(this);" id="data-menu">
+            <option title="Select an attached file" value="" selected="selected">Data...</option>
+            <option title="Upload or create a data file in a wide range of formats" value="__upload_data_file__">Upload or create file...</option>
+            <option value="">--------------------</option>
+            
+        </select>
+
+        
+        <select onchange="go_system_select(this, 0);" class="worksheet" id="systems-menu">
+            
+            <option title="Evaluate all input cells using sage" selected="selected" value="sage">
+                sage
+            </option>
+            
+            <option title="Evaluate all input cells using gap" value="gap">
+                gap
+            </option>
+            
+            <option title="Evaluate all input cells using gp" value="gp">
+                gp
+            </option>
+            
+            <option title="Evaluate all input cells using jsmath" value="jsmath">
+                jsmath
+            </option>
+            
+            <option title="Evaluate all input cells using html" value="html">
+                html
+            </option>
+            
+            <option title="Evaluate all input cells using latex" value="latex">
+                latex
+            </option>
+            
+            <option title="Evaluate all input cells using maxima" value="maxima">
+                maxima
+            </option>
+            
+            <option title="Evaluate all input cells using python" value="python">
+                python
+            </option>
+            
+            <option title="Evaluate all input cells using r" value="r">
+                r
+            </option>
+            
+            <option title="Evaluate all input cells using sh" value="sh">
+                sh
+            </option>
+            
+            <option title="Evaluate all input cells using singular" value="singular">
+                singular
+            </option>
+            
+            <option title="Evaluate all input cells using axiom" value="axiom">
+                axiom (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using kash" value="kash">
+                kash (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using macaulay2" value="macaulay2">
+                macaulay2 (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using magma" value="magma">
+                magma (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using maple" value="maple">
+                maple (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using mathematica" value="mathematica">
+                mathematica (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using matlab" value="matlab">
+                matlab (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using mupad" value="mupad">
+                mupad (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using octave" value="octave">
+                octave (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using scilab" value="scilab">
+                scilab (optional)
+            </option>
+            
+        </select>    
+        <input title="Enable/disable pretty_printing" onchange="pretty_print_check(this.checked);" class="worksheet" value="pretty_print" type="checkbox">&nbsp;Typeset
+        
+    </div>
+    <div id="share-publish-buttons">
+        
+        
+        
+        <a title="Print this worksheet" class="print-link" onclick="print_worksheet()"><img src="Logarithm%20operations_Sage_files/icon_print.gif" alt="Print" border="0">Print</a>
+        <a class="        control
+        " title="Interactively use this worksheet" onclick="edit_worksheet();">Worksheet</a>        
+        <a class="        control
+        " title="Edit text version of this worksheet" href="http://192.168.194.129/home/admin/6/edit">Edit</a>
+        <a class="        control
+        " title="View plain text version of this worksheet" href="http://192.168.194.129/home/admin/6/text">Text</a>
+        <a class="        control
+        " title="View changes to this worksheet over time" href="http://192.168.194.129/home/admin/6/revisions">Undo</a>
+        <a class="        control
+        " title="Let others edit this worksheet" href="http://192.168.194.129/home/admin/6/share">Share</a>
+        <a class="        control
+        " title="Make this worksheet publicly viewable" href="http://192.168.194.129/home/admin/6/publish">Publish</a>
+        
+    </div>
+</div>
+<div class="hidden" id="slide_controls">
+    <div class="slideshow_control">
+        <a class="slide_arrow" onclick="slide_next()">&gt;</a>
+        <a class="slide_arrow" onclick="slide_last()">&gt;&gt;</a> <span class="vbar"></span>
+        <a class="cell_mode" onclick="cell_mode()">Exit</a>
+    </div>
+    <div class="slideshow_progress" id="slideshow_progress" onclick="slide_next()">
+        <div class="slideshow_progress_bar" id="slideshow_progress_bar">&nbsp;</div>
+        <div class="slideshow_progress_text" id="slideshow_progress_text">&nbsp;</div>
+    </div>
+    <div class="slideshow_control">
+        <a class="slide_arrow" onclick="slide_first()">&lt;&lt;</a>
+        <a class="slide_arrow" onclick="slide_prev()">&lt;</a>
+    </div>
+</div>
+
+
+<div class="worksheet" id="worksheet">
+    
+
+
+
+    
+
+
+<div style="width: 1594px;" class="cell_input_active" id="cell_resizer">&nbsp;</div>
+
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_1" class="cell_visible">
+    <div id="cell_1" class="cell_evaluated">
+
+        
+        
+        
+            <div class="insert_new_cell" id="insert_new_cell_before1">
+            </div>
+            <script type="text/javascript">
+                $("#insert_new_cell_before1").plainclick(function (e) {
+                    insert_new_cell_before(1);
+                });
+                
+                $("#insert_new_cell_before1").shiftclick(function (e) {
+                    insert_new_text_cell_before(1);
+                });
+                
+            </script>
+        
+                <a href="javascript:evaluate_cell(1,%200);" class="eval_button" id="eval_button1" alt="Click here or press shift-return to evaluate">
+                    evaluate
+                </a>
+            
+            
+
+            <div id="introspect_div_1" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_1" onclick="cycle_cell_output_type(1);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_1">
+                            <div class="cell_output_wrap" id="cell_output_1"><!--notruncate--><div padding="6" id="div-interact-1"> <table width="800px" bgcolor="#c5c5c5" cellpadding="15" height="20px"><tbody><tr><td valign="top" align="left" bgcolor="#f9f9f9"><table>
+<tbody><tr><td colspan="3"><table><tbody><tr><td align="right"><font color="black">n1:&nbsp;</font></td><td><table><tbody><tr><td>
+        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider-n1-1" style="margin: 0px 1em; width: 15em;"><a style="left: 33.3333%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>
+        </td><td><font id="slider-n1-1-lbl" color="black">4.00000000000000</font></td></tr></tbody></table></td>
+</tr><tr><td align="right"><font color="black">n2:&nbsp;</font></td><td><table><tbody><tr><td>
+        <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider-n2-1" style="margin: 0px 1em; width: 15em;"><a style="left: 44.4444%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>
+        </td><td><font id="slider-n2-1-lbl" color="black">5.00000000000000</font></td></tr></tbody></table></td>
+</tr><tr><td align="right"><font color="black">operation&nbsp;</font></td><td><table style="border: 1px solid rgb(223, 223, 223); background-color: rgb(239, 239, 239);">
+<tbody><tr><td><button style="border-style: outset;" value="0" onclick="$('BUTTON', this.parentNode).css('border-style', 'outset'); $(this).css('border-style', 'inset'); interact(1, '_interact_.update(\'1\', \'operation\', 7, _interact_.standard_b64decode(\''+encode64(this.value)+'\'), globals()); _interact_.recompute(\'1\');')">Reset</button>
+<button style="border-style: inset;" value="1" onclick="$('BUTTON', this.parentNode).css('border-style', 'outset'); $(this).css('border-style', 'inset'); interact(1, '_interact_.update(\'1\', \'operation\', 7, _interact_.standard_b64decode(\''+encode64(this.value)+'\'), globals()); _interact_.recompute(\'1\');')">Multiply</button>
+<button style="border-style: outset;" value="2" onclick="$('BUTTON', this.parentNode).css('border-style', 'outset'); $(this).css('border-style', 'inset'); interact(1, '_interact_.update(\'1\', \'operation\', 7, _interact_.standard_b64decode(\''+encode64(this.value)+'\'), globals()); _interact_.recompute(\'1\');')">Divide</button>
+</td></tr></tbody></table></td>
+</tr><tr><td align="right"><font color="black">Show linear ruler:&nbsp;</font></td><td><input checked="checked" onchange="interact(1, '_interact_.update(\'1\', \'show_linear_ruler\', 8, _interact_.standard_b64decode(\''+encode64(this.checked)+'\'), globals()); _interact_.recompute(\'1\');')" width="200px" type="checkbox"></td>
+</tr></tbody></table></td></tr>
+<tr><td></td><td style="width: 100%;"><div id="cell-interact-1">
+        <table width="100%" bgcolor="white" border="0">
+        <tbody><tr><td valign="top" align="left" bgcolor="white"><pre><font color="black"><center><span class="typeset"><nobr><span class="scale"><span style="color: Black;"><span class="bold"><font xmlns="http://www.w3.org/1999/xhtml">n</font></span><font xmlns="http://www.w3.org/1999/xhtml">1<span style="position: relative; margin-left: 0.222em;">·</span><span style="position: relative; margin-left: 0.222em;"><span class="bold">n</span>2</span><span style="position: relative; margin-left: 0.277em;">=</span><span style="position: relative; margin-left: 0.277em;">4</span>.0<span style="position: relative; margin-left: 0.222em;">·</span><span style="position: relative; margin-left: 0.222em;">5</span>.0<span style="position: relative; margin-left: 0.277em;">=</span><span style="position: relative; margin-left: 0.277em;">1</span>0<span style="position: relative; top: -0.362em;"><span class="size2">0.6</span><span class="spacer" style="margin-left: 0.05em;"></span></span><span style="position: relative; margin-left: 0.222em;">·</span><span style="position: relative; margin-left: 0.222em;">1</span>0<span style="position: relative; top: -0.362em;"><span class="size2">0.7</span><span class="spacer" style="margin-left: 0.05em;"></span></span><span style="position: relative; margin-left: 0.277em;">=</span><span style="position: relative; margin-left: 0.277em;">1</span>0<span style="position: relative; top: -0.362em;"><span class="size2">0.6+0.7</span><span class="spacer" style="margin-left: 0.05em;"></span></span><span style="position: relative; margin-left: 0.277em;">=</span><span style="position: relative; margin-left: 0.277em;">1</span>0<span style="position: relative; top: -0.362em;"><span class="size2">1.3</span><span class="spacer" style="margin-left: 0.05em;"></span></span></font></span></span></nobr></span></center></font>
+</pre></td></tr>
+        <tr><td valign="top" align="left"><img src="Logarithm%20operations_Sage_files/sage0.gif"></td></tr>
+        </tbody></table></div></td><td></td></tr>
+<tr><td colspan="3"></td></tr>
+</tbody></table></td>
+                 </tr></tbody></table></div>
+                  </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_1"><h2>Click to the left again to hide and once more to show the dynamic interactive window</h2> </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_1"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_7" class="cell_visible">
+    <div id="cell_7" class="cell_not_evaluated">
+
+        
+        
+        
+            <div class="insert_new_cell" id="insert_new_cell_before7">
+            </div>
+            <script type="text/javascript">
+                $("#insert_new_cell_before7").plainclick(function (e) {
+                    insert_new_cell_before(7);
+                });
+                
+                $("#insert_new_cell_before7").shiftclick(function (e) {
+                    insert_new_text_cell_before(7);
+                });
+                
+            </script>
+        
+            
+                
+            
+            
+                <textarea style="height: 24px;" class="cell_input" rows="1" cols="80" id="cell_input_7" onkeypress="return input_keypress(7, event);" onkeydown="return input_keydown(7, event);" onkeyup="return input_keyup(7, event);" onblur="cell_blur(7); return true;" onfocus="cell_focused(this, 7); return true;"></textarea>
+                <a href="javascript:evaluate_cell(7,%200);" class="eval_button_active" id="eval_button7" alt="Click here or press shift-return to evaluate">
+                    evaluate
+                </a>
+            
+            
+
+            <div id="introspect_div_7" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_7" onclick="cycle_cell_output_type(7);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_7">
+                            <div class="cell_output_wrap" id="cell_output_7">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_7">
+                                    
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_7">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+
+
+</div>
+<div class="insert_new_cell" id="insert_last_cell"></div>
+<script type="text/javascript">
+    $("#insert_last_cell").plainclick(function (e) {
+        insert_new_cell_after(cell_id_list[cell_id_list.length - 1]);
+    });
+
+    $("#insert_last_cell").shiftclick(function (e) {
+        insert_new_text_cell_after(cell_id_list[cell_id_list.length - 1]);
+    });
+
+</script>
+
+    
+    <script type="text/javascript">
+        cell_id_list = [1, 7];
+        state_number = 0;
+        
+	$(document).ready(function () {
+            if (worksheet_name === "Untitled") {
+                rename_worksheet();
+            }
+         });
+	
+    </script>
+    
+</div>
+
+
+
+<script type="text/javascript">
+
+    worksheet_locked = false;
+
+</script>
+
+
+
+
+        </div>
+        
+    <input id="gwProxy" type="hidden"><!--Session data--><input onclick="if(typeof(jsCall)=='function'){jsCall();}else{setTimeout('jsCall()',500);}" id="jsProxy" type="hidden"><div id="refHTML"></div></body></html>

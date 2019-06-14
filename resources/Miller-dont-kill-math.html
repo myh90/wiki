@@ -1,0 +1,425 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>Don't Kill Math: Comments on Bret Victor's Scientific Agenda</title>
+        <link rel="stylesheet" type="text/css" href="Miller-dont-kill-math_files/emiller.css">
+        <style type="text/css">
+            blockquote {
+                font-size: 14px;
+            }
+            code {
+                background-color: #e3e3e3;
+            }
+            a.source {
+                font-family: monospace;
+            }
+            div.aside {
+                border: 2px dashed #6ecf4d;
+                margin: 20px;
+                padding: 10px;
+            }
+            div.aside code {
+                background-color: white;
+            }
+            div.figure {
+                border: 1px solid black;
+                margin: 20px;
+                padding: 10px;
+                padding-top: 20px;
+                text-align: center;
+            }
+            table td {
+                padding: 4px;
+            }
+        </style>
+        <script type="text/javascript" src="Miller-dont-kill-math_files/MathJax.js"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
+        <div id="content">
+            <a href="http://www.evanmiller.org/index.html"><img src="Miller-dont-kill-math_files/header.png"></a>
+            <div style="padding: 0px 20px;">
+<h1>Don't Kill Math: Comments on Bret Victor's Scientific Agenda</h1>
+
+<p>By <a href="http://www.evanmiller.org/">Evan Miller</a></p>
+
+<p><em>October 27, 2012</em></p>
+
+<p>One of the most refreshing voices to emerge on the Web belongs to <a href="http://worrydream.com/">Bret Victor</a>,
+ who, since he left Apple in 2010, has been busy weaving together words,
+ images, and code into compelling visions for computer-assisted 
+creativity and scientific understanding. Among his works over the last 
+two years you will find new &#8220;interfaces&#8221; for (really, conceptualizations
+ of) algebra, trigonometry, dynamic systems, algorithm design, computer 
+programming, circuit design, game design, animation, scientific 
+publishing, mathematical exposition, and political propaganda. Each 
+represents an impressive level of creativity and an admirable 
+expenditure of effort. Each of these interfaces bears the mark of genius
+ inasmuch as the average practitioner in the relevant field will think 
+of his work differently than he thought of it prior to seeing Victor's 
+presentation. In particular, the practitioner will think: &#8220;I need that.&#8221;</p>
+
+<p>The unifying goal of Victor's work, as he puts it in his <a href="http://vimeo.com/36579366">Inventing on Principle</a>
+ talk (for all practical purposes, Victor's manifesto) is to bring 
+people into closer communion with their creative ideas. I personally 
+applaud this goal, and would be hard-pressed to find anyone who is 
+against it (who can oppose human creativity?).</p>
+
+<p>And yet I feel compelled to express serious concern and reservation 
+about a particular aspect of Victor's agenda, namely, his dismissive 
+attitudes toward analytic methods in the sciences. His attitudes are 
+summarized in the web page called, without subtlety, <a href="http://worrydream.com/KillMath">Kill Math</a>.
+ It collects some of Victor's thoughts on symbolic manipulation (i.e. 
+algebra) as well as some demonstrations for what he believes to be 
+superior alternatives (i.e. computer simulations).</p>
+
+<p>My present purpose is to come to the defense of analytic methods, and
+ to explain why I think they should generally be preferred to other 
+methods. Before mounting this defense, let me review Victor's case 
+against old-fashioned analysis.</p>
+
+<p>The thrust of Victor's argument is as follows: the fruits of the 
+quantitative sciences are codified in symbolic equations, which, like 
+the rhythms of Latin poetry, are accessible to only to an elite few. It 
+is wrong that this knowledge is restricted to a small subset of humanity
+ (first argument), but this wrong can be corrected by creating computer 
+simulations which will allow a person without mathematical ability to 
+gain an intuition for the system being studied by manipulating an 
+interactive interface (second argument). Furthermore, these interactive 
+interfaces can and should replace traditional analytic methods for 
+practicing scientists and engineers because interactive interfaces 
+convey deeper understanding than their analytic counterparts (third 
+argument).</p>
+
+<p>I do not take issue with Victor's first argument &#8212; that it is wrong 
+that only a small subset of humanity can understand equations well 
+enough to make concrete predictions. But I think Victor is misguided in 
+his second and third arguments, when he advocates simulation as being 
+the best predictive tool for layman and scientist alike.</p>
+
+<p>In particular, Victor gives analytic methods rather short shrift when
+ it comes to comprehending the observed world. For reasons I will 
+explicate below, analytic methods are &#8212; and should be &#8212; considered a 
+first choice among scientists and engineers when attempting to 
+understand anything observable and quantitative. And because analytic 
+methods offer a fundamentally deeper understanding of phenomena than 
+simulations do, I believe that Victor's time would be better spent <em>making analytic methods accessible to the average person</em>
+ rather than attempting to replace analytic methods wholesale with 
+computer simulations, no matter how mesmerizing and seductive the 
+kaleidoscopic gyrations of the latter may be.</p>
+
+<p>For the practicing scientist, the chief virtue of analytic methods can be summed up in a single word: <em>clarity</em>. An equation describing a quantity of interest conveys <em>what is important in determining that quantity</em> and <em>what is not at all important</em>.</p>
+
+<p>To take an example, consider the universal law of gravitation, which describes the gravitational force between two bodies:</p>
+
+<span class="MathJax_Preview"></span><div style="text-align: center;" aria-readonly="true" role="textbox" class="MathJax_Display"><span style="" id="MathJax-Element-1-Frame" class="MathJax"><nobr><span style="width: 5.703em; display: inline-block;" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 5.124em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.209em, 1000em, 3.68em, -0.476em); top: -2.759em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-3" class="mi">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.106em;"></span></span><span style="font-family: MathJax_Main; padding-left: 0.278em;" id="MathJax-Span-4" class="mo">=</span><span style="padding-left: 0.398em; padding-right: 0.12em;" id="MathJax-Span-5" class="mfrac"><span style="display: inline-block; position: relative; width: 2.823em; height: 0px;"><span style="position: absolute; clip: rect(1.716em, 1000em, 2.781em, -0.457em); top: -3.267em; left: 50%; margin-left: -1.351em;"><span id="MathJax-Span-6" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-7" class="mi">G</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-8" class="mi">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.081em;"></span></span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-9" class="mi">m</span></span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span><span style="position: absolute; clip: rect(3.069em, 1000em, 4.178em, -0.486em); top: -3.257em; left: 50%; margin-left: -0.432em;"><span id="MathJax-Span-10" class="msubsup"><span style="display: inline-block; position: relative; width: 0.863em; height: 0px;"><span style="position: absolute; clip: rect(1.979em, 1000em, 2.77em, -0.486em); top: -2.59em; left: 0em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-11" class="mi">r</span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span><span style="position: absolute; top: -2.597em; left: 0.45em;"><span style="font-size: 70.7%; font-family: MathJax_Main;" id="MathJax-Span-12" class="mn">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(0.831em, 1000em, 1.239em, -0.507em); top: -1.29em; left: 0em;"><span style="border-left: 2.823em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0em;"></span><span style="display: inline-block; width: 0px; height: 1.07em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.759em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 2.493em; vertical-align: -0.897em;"></span></span></nobr></span></div><script id="MathJax-Element-1" type="math/tex; mode=display">
+F = \frac{GMm}{r^2}
+</script>
+
+<p>A person with a minimal education in physics can quickly surmise:</p>
+
+<p><em>What's important in determining F:</em> The product of the two masses; the square of the distance between them.</p>
+
+<p><em>What's not important:</em> Whether the first body has more mass 
+than the second body, or vice versa; whether the objects are moving, 
+spinning, or stationary; the possible presence of a brick wall in 
+between the two bodies; an electric charge on either body, or an 
+electric current running through them; and everything else we might 
+think of.</p>
+
+<p>Or consider the analytic solution to <a href="http://worrydream.com/SimulationAsAPracticalTool/">Victor's skateboard problem</a>:</p>
+
+<span class="MathJax_Preview"></span><div style="text-align: center;" aria-readonly="true" role="textbox" class="MathJax_Display"><span style="" id="MathJax-Element-2-Frame" class="MathJax"><nobr><span style="width: 5.453em; display: inline-block;" id="MathJax-Span-13" class="math"><span style="display: inline-block; position: relative; width: 4.899em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.472em, 1000em, 3.625em, -0.454em); top: -2.759em; left: 0em;"><span id="MathJax-Span-14" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-15" class="mi">s</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-16" class="mi">i</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-17" class="mi">n</span><span style="font-family: MathJax_Main;" id="MathJax-Span-18" class="mo">(</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-19" class="mi">&#952;</span><span style="font-family: MathJax_Main;" id="MathJax-Span-20" class="mo">)</span><span style="font-family: MathJax_Main; padding-left: 0.278em;" id="MathJax-Span-21" class="mo">=</span><span style="padding-left: 0.398em; padding-right: 0.12em;" id="MathJax-Span-22" class="mfrac"><span style="display: inline-block; position: relative; width: 0.683em; height: 0px;"><span style="position: absolute; clip: rect(1.979em, 1000em, 2.77em, -0.486em); top: -3.267em; left: 50%; margin-left: -0.225em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-23" class="mi">r</span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span><span style="position: absolute; clip: rect(1.727em, 1000em, 2.77em, -0.459em); top: -1.904em; left: 50%; margin-left: -0.282em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-24" class="mi">h</span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span><span style="position: absolute; clip: rect(0.831em, 1000em, 1.239em, -0.507em); top: -1.29em; left: 0em;"><span style="border-left: 0.683em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0em;"></span><span style="display: inline-block; width: 0px; height: 1.07em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.759em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 2.14em; vertical-align: -0.836em;"></span></span></nobr></span></div><script id="MathJax-Element-2" type="math/tex; mode=display">
+sin(\theta) = \frac{r}{h}
+</script>
+
+<p><em>What's important in determining <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-3-Frame" class="MathJax"><nobr><span style="width: 0.516em; display: inline-block;" id="MathJax-Span-25" class="math"><span style="display: inline-block; position: relative; width: 0.442em; height: 0px; font-size: 113%;"><span style="position: absolute; clip: rect(1.729em, 1000em, 2.775em, -0.463em); top: -2.6em; left: 0em;"><span id="MathJax-Span-26" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-27" class="mi">&#952;</span></span><span style="display: inline-block; width: 0px; height: 2.6em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.933em; vertical-align: -0.074em;"></span></span></nobr></span><script id="MathJax-Element-3" type="math/tex">\theta</script>:</em> The ratio of <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-4-Frame" class="MathJax"><nobr><span style="width: 0.516em; display: inline-block;" id="MathJax-Span-28" class="math"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.979em, 1000em, 2.77em, -0.486em); top: -2.59em; left: 0em;"><span id="MathJax-Span-29" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-30" class="mi">r</span></span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.628em; vertical-align: -0.075em;"></span></span></nobr></span><script id="MathJax-Element-4" type="math/tex">r</script> to <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-5-Frame" class="MathJax"><nobr><span style="width: 0.641em; display: inline-block;" id="MathJax-Span-31" class="math"><span style="display: inline-block; position: relative; width: 0.563em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.727em, 1000em, 2.77em, -0.459em); top: -2.59em; left: 0em;"><span id="MathJax-Span-32" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-33" class="mi">h</span></span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.908em; vertical-align: -0.075em;"></span></span></nobr></span><script id="MathJax-Element-5" type="math/tex">h</script>.</p>
+
+<p><em>What's not important:</em> The speed of the skateboard, the size of <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-6-Frame" class="MathJax"><nobr><span style="width: 0.516em; display: inline-block;" id="MathJax-Span-34" class="math"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.979em, 1000em, 2.77em, -0.486em); top: -2.59em; left: 0em;"><span id="MathJax-Span-35" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-36" class="mi">r</span></span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.628em; vertical-align: -0.075em;"></span></span></nobr></span><script id="MathJax-Element-6" type="math/tex">r</script> in absolute terms, the size of <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-7-Frame" class="MathJax"><nobr><span style="width: 0.641em; display: inline-block;" id="MathJax-Span-37" class="math"><span style="display: inline-block; position: relative; width: 0.563em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.727em, 1000em, 2.77em, -0.459em); top: -2.59em; left: 0em;"><span id="MathJax-Span-38" class="mrow"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-39" class="mi">h</span></span><span style="display: inline-block; width: 0px; height: 2.59em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.908em; vertical-align: -0.075em;"></span></span></nobr></span><script id="MathJax-Element-7" type="math/tex">h</script> in absolute terms, the color of the grass, and everything else we might think of.</p>
+
+<p>To the trained eye, equations yield <em>confident understanding</em> and <em>memorable insights</em>.
+ If something is not in the equation, it simply doesn't matter. (The 
+importance of an equation has as much to do with what is absent from the
+ equation as with what is in it.) Similarly, if two variables appear in 
+the equation <em>only as a product</em> or <em>only as a ratio</em>, then <em>only the product (or the ratio) matters</em>.</p>
+
+<p>Of course, an equation's <em>dramatis personae</em> is only the 
+beginning of the play. We can then ask questions such as: can the 
+quantity of interest ever be zero? Can it ever be negative? If a 
+particular variable doubles, how is the quantity of interest affected, 
+and <em>what does that effect depend on?</em> Analytic methods (in 
+particular, partial derivatives) tell us exactly how one variable can 
+amplify or diminish the effect of a second variable on a third variable.
+ They describe with great precision the rich set of interactions that 
+lie beneath the surface.</p>
+
+<p>Contrast this situation to the &#8220;intuitive&#8221; understanding one is 
+supposed to gain by playing with a Victor-style computer simulation. One
+ might make &#8220;discoveries&#8221;, but one is never certain:</p>
+
+<ul>
+    <li><p>Does this &#8220;discovery&#8221; apply to all parameter choices?</p></li>
+
+    <li><p>What is the actual <em>quantitative content</em> of this discovery? If some relationship appears to hold &#8212; is this relationship <em>approximate</em> or <em>exact</em>? Numbers might go &#8220;up together&#8221; or &#8220;down together&#8221;, but is the underlying relationship <em>linear</em>, <em>exponential</em>, <em>periodic</em>, or what? If <em>no</em> relationship appears to hold &#8212; is that because I can't see it, or because it's not there?</p></li>
+
+    <li><p>Am I missing a more fundamental relationship in this 
+simulation? Is there a product, ratio, or other function of parameters 
+that is more important than the parameters considered individually?</p></li>
+</ul>
+
+<p>Victor addresses the first concern in his essay, <a href="http://worrydream.com/LadderOfAbstraction/">Up and Down the Ladder of Abstraction</a>.
+ The problem described in this essay &#8212; an algorithm for turning a car 
+that has driven off the track &#8212; is not immediately amenable to analytic 
+methods (at least to my eyes), so it is an excellent showcase for 
+computer simulation. And yet it suffers from the same shortcomings that 
+all computer simulations suffer from, namely:</p>
+
+<ul>
+    <li><p><em>The curse of dimensionality.</em> &#8220;Sweeping&#8221; a parameter 
+space is a neat trick for finding an optimum, used to great effect in 
+The Ladder of Abstraction as well as Victor's video, <a href="http://vimeo.com/23839605/">Interactive Exploration of a Dynamical System</a>.
+ However, the trick becomes impractical as soon as there are more than a
+ handful of parameters. (The amount of computation required to sweep a 
+parameter space grows exponentially with the number of parameters.) The 
+Ladder of Abstraction cannot have more than a few rungs.</p>
+
+    </li><li><p><em>No quantitative content.</em> I have no idea what I 
+am supposed to take away from the picture at the top of the ladder. I 
+might describe a &#8220;strip of stability&#8221; and an &#8220;inlet of uncertainty&#8221; in 
+the final picture, but this is an exercise in classification, akin to 
+geography, zoology, or philately.</p></li>
+
+    <li><p><em>No insight into possible relationships between parameters.</em>
+ Can I reduce the provided parameters to a more fundamental quantity of 
+some sort? There is no way of telling from the simulation.</p></li>
+</ul>
+
+<p>As with interactive displays at science museums, the colorful process
+ of &#8220;discovery&#8221; feels engaging and rewarding, but the actual insights 
+tend to be tenuous and imprecise. For this particular problem domain, 
+that may be the best one can do: build up pictures and hope for a 
+semblance of understanding. But the absence of analytic insight should 
+be mourned, for the same reason a sailor should curse if he is forced to
+ navigate without a chart.</p>
+
+<p>Suppose for a moment that the list of insights derived from 
+simulation were identical in precision and quantity to those derived 
+from analysis. I would argue that analytic methods should still be 
+preferred wherever they are available. Analysis lets you ask the basic 
+question of all scientific inquiry: &#8220;Why?&#8221; On what assumptions does this
+ insight depend? When will it hold up, and when will it break down? Is 
+it a logical consequence of something I knew previously? Simulation can 
+demonstrate the <em>what</em> and <em>how</em>, but never elucidate the <em>why</em>. Analysis connects disparate insights together through the structure of mathematics.</p>
+
+<p>Analytic methods are by no means the one true path to scientific 
+enlightenment. They can be used speciously, that is to say, without 
+empirical justification, and in many situations, they fail to produce 
+any insight. <em>However, more than Victor would have his readers 
+believe, analytic methods are often an appropriate and illuminating tool
+ for messy, &#8220;real-world&#8221; problems.</em></p>
+
+<p>What Victor neglects to mention in his essays is that there are highly developed analytic methods that can solve problems <em>very close to, if not identical to</em>
+ the problems that he describes as requiring simulation. The analytic 
+solutions, when present, carry the usual benefits: clarity, confident 
+understanding, and memorable insights.</p>
+
+<p>In particular, I would like to draw attention to three analytic tools
+ that would go a long way toward solving the problems posed in Victor's 
+essays:</p>
+
+<ul>
+    <li><p><a href="http://en.wikipedia.org/wiki/Lagrange_polynomial">Lagrange polynomials</a>. In <a href="http://worrydream.com/SimulationAsAPracticalTool/">Simulation as a Practical Tool</a>,
+ Victor drew the curved wall so it &#8220;looked good&#8221;, but it seems one could
+ construct something awfully close with just a few polynomial or 
+sinusoidal terms.</p></li>
+
+    <li><p><a href="http://en.wikipedia.org/wiki/Polar_coordinate_system">Polar coordinates</a>.
+ Modeling the wall as a parametric curve or as a function in polar 
+coordinates, one could start to solve for properties in the most general
+ case, rather than being chained to the shapes of particular walls.</p></li>
+
+    <li><p><a href="http://en.wikipedia.org/wiki/Calculus_of_variations">The calculus of variations</a> and <a href="http://en.wikipedia.org/wiki/Optimal_control_theory">optimal control theory</a>:
+ These are tools for finding entire functions that optimize a value of 
+interest; they are commonly used to solve problems quite close to the 
+car-driving problem.</p></li>
+</ul>
+
+<p>The reader will forgive me for not playing the role of teacher and 
+working out examples of each of these. That is not the purpose of the 
+present essay. I merely wish to point out that Victor fails to exhaust 
+all the possible analytic approaches before proclaiming they should be 
+abandoned in favor of his preferred method of simulation.</p>
+
+<p>And here, I think, is where Victor made a mistake. He speaks grandly 
+of how with simulation, &#8220;The conditions of a problem do not need to be 
+contrived or compromised for a convenient symbolic representation.&#8221; <em>But compromises and contrivances have been at the heart of all scientific discovery since Bacon.</em>
+ Approximating the planets as spheres, electrons as point-charges, 
+nuclei as point-masses and space as a vacuum are all &#8220;contrivances&#8221; with
+ &#8220;a convenient symbolic representation&#8221; that have yielded concise 
+descriptions &#8212; more importantly, precise predictions &#8212; about the 
+universe we inhabit.</p>
+
+<p>In the physical sciences, approximations are part and parcel with 
+analytic methods. In my mind, the role of simulation &#8212; for both the 
+scientist and the layman &#8212; should be to show us where our analytic 
+approximations are useful, and where they are not useful. Minds like 
+Victor's should be focused not on eliminating analysis from the process 
+of inquiry, but on making analysis easier, more intuitive, and more 
+concrete &#8212; ideally, allowing mathematical novices to ply even the dark 
+arts of Lagrange polynomials and the calculus of variations. Simulation 
+facilities should serve only as a sort of back-up method for those 
+lamentable situations where the fog is too thick to see anything 
+clearly, that is to say, where analytic methods fail to enlighten.</p>
+
+<p style="text-align: center">**</p>
+
+<p>A tangent to Bret Victor's &#8220;Kill Math&#8221; project is something that he calls <a href="http://worrydream.com/ExplorableExplanations/#reactiveDocument">reactive documents</a>.
+ In his own words, a reactive document is one in which &#8220;The reader can 
+play with the premise and assumptions of various claims, and see the 
+consequences update immediately.&#8221; As an example, there is a paragraph 
+describing the number of state parks that must be shut down in 
+California assuming that a certain tax is levied; as the reader changes 
+the size and structure of the tax according to his whim, the stated 
+number of parks to be shuttered changes in concert.</p>
+
+<p>It is an interesting concept. And yet the provided example 
+represents, I think, the worst of Victor's anti-equation ideology. There
+ are five independent controls which one may click and drag around. But 
+doing so is merely groping around in the dark &#8212; one tries this, tries 
+that, and tries the other, and at the end of it, tries to remember the 
+effect that each control actually exerted on the outcome, and (God help 
+you) whether this effect was distorted by the position of any of the 
+other controls.</p>
+
+<p>A complete and rigorous understanding of all five of those numbers 
+could be gained by displaying a simple equation that any high-school 
+student can read and understand:</p>
+
+<pre>(Parks shut down) = 218 parks - ((Vehicle tax) * (Fraction charged) * 28 million vehicles
+                                 + (Income tax) * (Fraction charged) * 14 million taxpayers
+                                 + (104 million potential visitors) 
+                                  * (Fraction who attend given Admission price) 
+                                  * (Admission price) )
+                               / ($2.2 million per park)
+</pre>
+
+<p>Here we have a perfect case for analytic methods &#8212; where all of the 
+interconnections between variables become perfectly visible to any 
+high-schooler's eye &#8212; but, fantastically, Victor prefers to embed a 
+five-parameter simulation in the document rather than affright his 
+reader with the sight of addition and multiplication. I am sure that a 
+person of Victor's ingenuity could make the mechanics of the above 
+equation engaging and comprehensible to the lay reader. But rather than 
+illuminate and explain the equation's inner workings, he has chosen to 
+hide them away.</p>
+
+<p>Something that quickly becomes clear from examining the equation &#8212; 
+but not from examining particular inputs and outputs &#8212; is that this 
+miniature simulation includes an important contrivance:</p>
+
+<pre>    Fraction who attend given Admission price
+</pre>
+
+<p>The curious reader who digs into Victor's source code will find this snippet:</p>
+
+<code><pre>    // fake demand curve
+    model.newVisitorCount = model.oldVisitorCount * Math.max(0.2,  
+                     1 + 0.5*Math.atan(1 - averageAdmission/model.oldAdmission));
+</pre></code>
+
+<p>To paraphrase the pamphleteer, &#8220;Behold the convenient appearance of 
+the arc-tangent!&#8221; A crucial part of the analysis has been fabricated out
+ of whole cloth. We are led to this discovery only because the equation 
+encourages us to ask the question, &#8220;Why?&#8221;. In contrast, had we focused 
+only on the knobs, switches, and output, we would never even think to 
+question the underlying assumptions of the model. The simulation pats 
+the reader on the head and tells him not to worry about the details.</p>
+
+<p>I will conclude with a passage from Nikola Tesla, the prolific 
+inventor who briefly worked for Thomas Edison. He described Edison's 
+work habits thus:</p>
+
+<blockquote>
+[Edison's] method was inefficient in the extreme, for an immense ground 
+had to be covered to get anything at all unless blind chance intervened 
+and, at first, I was almost a sorry witness of his doings, knowing that 
+just a little theory and calculation would have saved him 90% of the 
+labor. But he had a veritable contempt for book learning and 
+mathematical knowledge, trusting himself entirely to his inventor's 
+instinct and practical American sense.
+</blockquote>
+
+<p>It is too early to tell whether Bret Victor will one day earn a 
+proper comparison to Edison in scope of invention and influence, but 
+&#8220;Inventing on Principle&#8221; leaves no doubt that his personal agenda is to 
+make Edisons of us all. That is a laudable goal, but it must be 
+qualified. If Victor were to embrace &#8220;just a little theory and 
+calculation&#8221; in his scientific agenda, he would help us not merely to 
+survey the universe of possible worlds via simulation, but to see the 
+underlying structure of those possibilities with a level of clarity 
+afforded only by analysis.</p>
+
+<hr>
+
+<p><a href="http://www.evanmiller.org/">Back to Evan Miller's home page</a> &#8211; <a href="http://twitter.com/EvMill">Follow on Twitter</a> &#8211; <a href="http://www.evanmiller.org/news.xml">Subscribe to RSS</a></p>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Miller-dont-kill-math_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5838049-1");
+pageTracker._trackPageview();
+</script>
+
+
+
+<div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: 'MathJax_Main',sans-serif;" id="MathJax_Font_Test">&#61438;</div></body></html>

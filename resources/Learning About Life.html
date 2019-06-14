@@ -1,0 +1,662 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>Learning About Life</title></head>
+
+
+<body>
+<b><h1>Learning About Life</h1></b>
+<hr>
+<a href="http://el.www.media.mit.edu/people/mres/">Mitchel Resnick</a><br>
+<a href="http://el.www.media.mit.edu/groups/el/">Epistemology and Learning Group</a><br>
+<a href="http://www.media.mit.edu/">The Media Laboratory</a><br>
+<a href="http://web.mit.edu/">Massachusetts Institute of Technology</a><br>
+20 Ames Street Room E15-312<br>
+Cambridge, MA 02139<br>
+mres@media.mit.edu<br>
+<hr>
+Published in <i>Artificial Life</i>, vol. 1, no. 1-2, spring 1994.<p>
+
+<b></b></p><h2><b>1. Introduction</b></h2><p>
+For 300 years, the models and metaphors of Newtonian physics have
+dominated the world of science. Newton offered an image of the universe as a
+machine, a clockwork mechanism. Newton's universe is ruled by linear cause and
+effect--one gear turns, which makes a second gear turn, which makes a third
+gear turn, and so on. This cause-effect relationship is captured in Newton's
+<i>F=ma</i> formula: force gives rise to acceleration, cause gives rise to
+effect.</p><p>
+These Newtonian images have spread beyond the community of scientists, deeply
+influencing work in the social sciences, the humanities, and the arts.
+Newtonian metaphors have formed the foundation for how people think about
+science--and, more generally, how they make sense of the world around them.  </p><p>
+In recent years, a new set of models and metaphors have begun to spread through
+the scientific community, and gradually into the culture at large. Many of
+these new ideas come not from physics, but from biology. In a growing number of
+disciplines, researchers are now viewing the systems they study less like
+clockwork mechanisms, and more like complex ecosystems. Increasingly, ideas
+from ecology, ethology, and evolution are spreading beyond their disciplinary
+boundaries. Ideas like self-organization and emergence are affecting the
+direction and nature of research in many other fields, from economics to
+engineering to anthropology. In general, there is a pronounced shift toward
+<i>decentralized</i> models, in which patterns are determined not by some
+centralized authority, but by local interactions about decentralized
+components. The growing interest in the field of Artificial Life is both a
+reflection of and a contributor to this broader intellectual shift.</p><p>
+Biology-inspired models and metaphors will have their greatest influence when
+they spread outside of the scientific community and into the general culture.
+For children growing up in the world today, learning about living systems is
+taking on a new urgency. The point is not just to understand the biological
+world (though that, of course, is a worthy endeavor). Rather, decentralized
+models of living systems provide a basis for understanding many other systems
+and phenomena in the world. As these ideas seep out of the scientific
+community, they are likely to cause deep changes in how children (and adults
+too) make sense of the world. This paper explores ways to help make that
+happen.</p><p>
+</p><p>
+<b></b></p><h2><b>2. New Ways of Thinking</b></h2><p>
+Among living systems, there are many examples of decentralized
+phenomena. As ants forage for food, for example, their trail patterns are
+determined not by the dictates of the queen ant, but by local interactions
+among thousands of worker ants. In the immune system, armies of antibodies seek
+out bacteria in a systematic, coordinated attack--without any "generals"
+organizing the battle plan. The antibodies are organized without an organizer,
+coordinated without a coordinator.</p><p>
+But seeing the world in terms of decentralized interactions is a difficult
+shift for many people. It requires a fundamental shift in perspective, a new
+way of looking at the world. At some deep level, people have strong attachments
+to centralized ways of thinking. When people see patterns in the world (like a
+flock of birds), they often assume that there is some type of centralized
+control (a leader of the flock). And in constructing artificial systems, people
+often impose centralized control where none is needed (for example, using
+top-down, hierarchical programming structures to control a robot's behavior).</p><p>
+According to this way of thinking, a pattern can exist only if someone (or
+something) creates and orchestrates the pattern. Everything must have a single
+cause, an ultimate controlling factor. The continuing resistance to
+evolutionary theories is an example: Many people still insist that someone or
+something must have explicitly designed the complex, orderly structures that we
+call Life. As William Paley argued nearly two centuries ago (Paley, 1802): If
+you found a watch on the ground, you would assume that it must have had a
+maker; so must not the same be true of living systems, which are incredibly
+more complex? </p><p>
+This assumption of centralized control, a phenomenon I call the <i>centralized
+mindset</i>, is not just a misconception of the scientifically naive. The
+history of science is filled with examples of scientists remaining committed to
+centralized explanations, even in the face of discrediting evidence. When
+fossil records showed that very different creatures existed at different times
+in history, scientists did not give up on ideas of supernatural creation.
+Rather, they hypothesized that there must have been a whole series of
+extinctions and new creations. In the 20th century, as the genetic basis of
+evolution became understood, scientists initially adopted a too-centralized
+view of genes, focusing on the actions and fitness values of individual genes,
+rather than studying interactions among genes.</p><p>
+Even today, centralized thinking persists in evolutionary debates. In trying to
+explain the periodic massive extinctions of life on Earth, many scientists
+assume some external cause--for example, periodic waves of meteors hitting the
+Earth. But more decentralized explanations are possible. Recent computer
+simulations show that simple interactions within the standard evolutionary
+process can give rise to periodic massive extinctions, without any outside
+intervention (Lindgren, 1991).</p><p>
+The history of research on slime-mold cells, as told by Keller (1985), provides
+another example of centralized thinking. At certain stages of their life cycle,
+slime-mold cells gather together into clusters. For many years, scientists
+believed that the aggregation process was coordinated by specialized slime-mold
+cells, known as "founder" or "pacemaker" cells. According to this theory, each
+pacemaker cell sends out a chemical signal, telling other slime-mold cells to
+gather around it, resulting in a cluster. In 1970, Keller and Segel (1970)
+proposed an alternative model, showing how slime-mold cells can aggregate
+without any specialized cells. Nevertheless, for the following decade, other
+researchers continued to assume that special pacemaker cells were required to
+initiate the aggregation process. As Keller (1985) writes, with an air of
+disbelief: "The pacemaker view was embraced with a degree of enthusiasm that
+suggests that this question was in some sense foreclosed." By the early 1980's,
+based on further research by Cohen and Hagan (1981), researchers began to
+accept the idea of aggregation among homogeneous cells, without any pacemaker.
+But the decade-long resistance serves as some indication of the strength of the
+centralized mindset.</p><p>
+The centralized mindset can manifest itself in many different ways. When people
+observe patterns or structures in the world, they tend to assume that patterns
+are created either <i>by lead</i> or <i>by seed</i>. That is, they assume that
+a <i>leader</i> orchestrated the pattern (e.g., the bird at the front of the
+flock, the pacemaker slime-mold cell), or they assume that some <i>seed</i>
+(some pre-existing, built-in inhomogeneity in the environment) gave rise to the
+pattern, much as a grain of sand gives rise to a pearl. </p><p>
+In some ways, it is not surprising that people tend to assume centralized
+control, even where none exists. Many phenomena in the world <i>are</i>, in
+fact, organized by a central designer. These phenomena act to reinforce the
+centralized mindset. When people see neat rows of corn in a field, they assume
+(correctly) that the corn was planted by a farmer. When people watch a ballet,
+they assume (correctly) that the movements of the dancers were planned by a
+choreographer. Moreover, most people participate in social systems (such as
+families and school classrooms) where power and authority are very centralized
+(sometimes excessively so).</p><p>
+In fact, centralized strategies are often very useful. Sometimes, it is a good
+idea to put someone or something in charge. The problem is that people, in the
+past, have relied almost entirely on centralized strategies. Decentralized
+approaches have been ignored, undervalued, and overlooked. Centralized
+solutions have been seen as <i>the</i> solution.</p><p>
+</p><p>
+<b></b></p><h2><b>3. Tools for Learning</b></h2><p>
+How can people move beyond this centralized mindset? How can they
+develop new intuitions about decentralized phenomena? The methodology of
+Artificial Life suggests a solution. One of the basic tenets of Artificial Life
+is that the best way to learn about living systems is to try to construct
+living systems (or, at least, models and simulations of living systems). This
+idea holds true whether the learners are scientists or children. To help people
+move beyond the centralized mindset, it makes sense to provide them with
+opportunities to create, experiment, and play with decentralized systems. </p><p>
+This approach has strong backing in educational and psychological research,
+most notably in the so-called "constructionist" theory of learning (Papert,
+1980, 1991). Constructionism involves two types of construction. First,
+borrowing from the "constructivist" theories of Jean Piaget, it asserts that
+learning is an active process, in which people actively construct knowledge
+from the experiences in the world. To this, constructionism adds the idea that
+people construct new knowledge with particular effectiveness when they are
+engaged in constructing personally-meaningful artifacts--be they sand castles,
+stories, LEGO robots, or computer programs. </p><p>
+Though constructionism shares certain ideas with "hands-on" approaches to
+education, it goes beyond hands-on in several important ways. In many hands-on
+activities, students simply follow a "recipe" of what to do. Students are
+limited in how far they can improvise and explore. Consider pre-packaged
+simulations. No matter how well a pre-packaged simulation is designed, it can
+not take into account all of the possible "what-if" questions that users will
+want to ask. A constructionist alternative is to provide students with tools so
+that they can construct (and modify) their own simulations. This approach not
+only expands the possible range of explorations, it also makes those
+explorations more personally meaningful.</p><p>
+The constructionist approach received a lasting endorsement from the great
+physicist Richard Feynman. On the day that Feynman died, the following message
+was found on his office blackboard: "What I cannot create, I do not understand"
+(Gleick, 1992). What was true for Feynman is true for the rest of us. One of
+the best ways to gain a deeper understanding of something is to create it, to
+construct it, to build it.</p><p>
+So to help people learn about decentralized systems, we need to provide them
+with new sets of tools for creating and experimenting with such systems. But
+what types of tools are needed? Over the years, computer scientists have
+developed a wide variety of decentralized computational models--such as neural
+networks (Rumelhart et al., 1986), the subsumption architecture (Brooks, 1991),
+and cellular automata (Toffoli and Margolus, 1987). In all of these models,
+orderly patterns can arise from interactions among a decentralized collection
+of computational objects. In neural networks, patterns of "activation" arise
+from interactions among low-level "nodes." With the subsumption architecture,
+actions of a robotic creature arise from interactions among low-level
+"behaviors."</p><p>
+These models, while very useful for professional researchers, are ill-suited
+for people who have little experience with (or little interest in) manipulating
+formal systems. In general, these models are based on objects and interactions
+that most people are not familiar with. For example, the idea of writing
+"transition rules" for "cells" is not an idea that most people can relate to.</p><p>
+In recent years, a number of computer programs have attempted to bring ideas
+about decentralized systems to a broader audience. Some programs, such as
+Vehicles (based on Braitenberg, 1984) and LEGO/Logo (Resnick, 1989), allow
+people to explore simple animal behaviors. Other programs, such as Agar
+(Travers, 1989), SimAnt (McCormick and Wright, 1991), and StarLogo (Resnick,
+1991, 1992), allow people to explore the collective behavior of social insects.
+Still others, such as SimLife (Karakotsios, 1992), Echo (Holland, 1993), and
+Simulated Evolution (Palmiter, 1989), allow people to explore evolutionary
+behavior. </p><p>
+These programs, too, are limited as learning tools. Too often, these programs
+shield users from underlying mechanisms, preventing users from investigating,
+let alone modifying, the underlying models. And in many cases, the programs
+focus too much on achieving interesting behaviors, and too little on helping
+users make sense of those behaviors. But these programs represent a good first
+step in making ideas about decentralized systems accessible to a broader (and
+younger) audience. </p><p>
+</p><p>
+<b></b></p><h2><b>4. Learning Experiences</b></h2><p>
+This section examines the types of learning experiences made possible by
+these new computational tools. The examples focus on two tools that I helped
+develop: LEGO/Logo and StarLogo. </p><p>
+LEGO/Logo is a type of creature construction kit. With LEGO/Logo, children can
+build robotic "creatures" out of LEGO pieces, using not only the traditional
+LEGO building bricks but also newer LEGO pieces like gears, motors, and
+sensors. Then, they write computer programs (using a modified version of the
+programming language Logo) to control the behaviors of the creatures. </p><p>
+StarLogo is a massively-parallel programming language, designed especially for
+nonexpert programmers. With StarLogo, people can write rules for thousands of
+graphic creatures on the computer screen, then observe the group-level
+behaviors that emerge from the interactions. People can also write rules for
+"patches" of the world in which the creatures live, allowing new types of
+creature-environment interactions. For example, Figure 1 shows a StarLogo
+simulation inspired by the discussion of slime-mold aggregation. Each
+"creature" emits a chemical phermone, while also following the gradient of the
+phermone. The patches cause the pheromone to diffuse and evaporate. With this
+simple decentralized strategy, the creatures aggregate into clusters after
+several dozen time steps.</p><p>
+</p><p>
+<img src="Learning%20About%20Life_files/ALifeJournal1.GIF">
+ 
+<img src="Learning%20About%20Life_files/ALifeJournal2.GIF">
+ 
+<img src="Learning%20About%20Life_files/ALifeJournal3.GIF"></p><p>
+<i>Figure 1. StarLogo simulation inspired by slime-mold aggregation.</i></p><p>
+</p><p>
+<b>4.1 LEGO/Logo Creatures</b></p><p>
+A major goal of Artificial Life research is to gain a better
+understanding of emergent phenomena. As Langton (1989) put it: "The `key'
+concept in AL is emergent behavior. Natural life emerges out of the organized
+interactions of a great number of nonliving molecules, with no global
+controller responsible for the behavior of every part."</p><p>
+In many animal systems, there are two types of emergence. First, the behavior
+of each individual creature emerges from interactions among the "agents" that
+make up the creature's mind. At the same time, the behavior of the entire
+animal colony or society emerges from the interactions among the individual
+creatures. In short: the colony level emerges from the creature level, which in
+turn emerges from the agent level.</p><p>
+With LEGO/Logo, children can begin to observe and experiment with simple
+emergent behaviors. Consider a simple LEGO creature with a light sensor
+pointing upward. Imagine that the creature is programmed with two rules: (1)
+move forward when you detect light, (2) move backward when you are in the dark.
+When this creature is released in the environment, it exhibits a type of
+emergent behavior: it seeks out the edge of a shadow, then happily oscillates
+around the shadow edge. The creature can be viewed as an "Edge-Finding
+Creature." This edge-finding capability is not explicitly represented in the
+creature's two rules. Rather, it emerges from interactions of those rules with
+specific structures in the environment.</p><p>
+Here is another example. When we started to develop LEGO/Logo, one of our first
+projects was to program a LEGO "turtle" to follow a line on the floor. The
+basic strategy was to make the turtle weave back and forth across the line,
+making a little forward progress on each swing. First, the turtle veered ahead
+and to the right, until it lost sight of the line. Then it veered ahead and to
+the left, until it again lost sight of the line. Then it started back to the
+right, and so on. This behavior can be represented by two simple rules: (1) if
+you are veering to the left and you lose sight of the line, begin to veer
+right, (2) if you are veering to the right and you lose sight of the line,
+begin to veer left. </p><p>
+We tried the program, and the turtle followed the line perfectly. But as the
+turtle approached the end of the line, we realized that we hadn't "programmed
+in" any rules for what to do at the end of the line. We didn't know what the
+turtle would do. We were pleased with the behavior that emerged: the turtle
+turned all the way around and started heading back down the line in the other
+direction. This "end-of-line" behavior was not explicitly programmed into the
+turtle. Rather it emerged from the interactions between the turtle's rules and
+the unfamiliar environment at the end of the line.</p><p>
+Of course, these examples represent very, very simple cases of emergence. But
+that is precisely what children (and, for that matter, learners of all ages)
+need, in order to start making sense of the unfamiliar concept of emergence.</p><p>
+<b>4.2 StarLogo Termites</b></p><p>
+Philip Morrison, the MIT physicist and science educator, once told me a
+story about his childhood. When Morrison was in elementary school, one of his
+teachers described the invention of the arch as one of the central, defining
+milestones of human civilization. Arches took on a special meaning for the
+young Morrison. He felt a certain type of pride whenever he saw an arch. Many
+years later, when Morrison learned that lowly termites also build arches, he
+was quite surprised (and amused). He gained a new skepticism about everything
+that he was taught in school, and a new respect for the capabilities of
+termites. Ever since, Morrison has wondered about the limits of what termites
+might be able to do. If they can build arches, why not more complex structures?
+Given enough time, Morrison wondered, might termites build a radio telescope?</p><p>
+Probably not. But termites <i>are</i> among the master architects of the animal
+world. On the plains of Africa, termites construct giant mound-like nests
+rising more than 10 feet tall, thousands of times taller than the termites
+themselves. Inside the mounds are intricate networks of tunnels and chambers.
+Certain species of termites even use architectural tricks to regulate the
+temperature inside their nests, in effect turning their nests into elaborate
+air-conditioning systems. As E.O. Wilson (1971) notes: "The entire history of
+the termites ... can be viewed as a slow escape by means of architectural
+innovation from a dependence on rotting wood for shelter." </p><p>
+Each termite colony has a queen. But, as in ant colonies, the termite queen
+does not "tell" the termite workers what to do. (In fact, it seems fair to
+wonder if the designation "queen" is a reflection of human biases. "Queen"
+seems to imply "leader." But the queen is more of a "mother" to the colony than
+a "leader.") On the termite construction site, there is no construction
+foreman, no one in charge of the master plan. Rather, each termite carries out
+a relatively simple task. Termites are practically blind, so they must interact
+with each other (and with the world around them) primarily through their senses
+of touch and smell. But from local interactions among thousands of termites,
+impressive structures emerge.</p><p>
+The global-from-local nature of termite constructions makes them well-suited
+for StarLogo explorations. Of course, simulating the construction of an entire
+termite nest would be a monumental project (involving many details unrelated to
+my interests). Instead, I worked together with a high-school student, named
+Callie, on a simpler project: Program the termites to collect wood chips and
+put them into piles. At the start of the program, wood chips were scattered
+randomly throughout the termites' world. The challenge was to make the termites
+organize the wood chips into a few, orderly piles.</p><p>
+We started with a very simple strategy. We made each individual termite obey
+the following rules:</p><p>
+* If you are not carrying anything and you bump into a wood chip, pick it up.</p><p>
+* If you are carrying a wood chip and you bump into another wood chip, put down
+the wood chip you're carrying.</p><p>
+At first, we were skeptical that this simple strategy would work. There was no
+mechanism for preventing termites from taking wood chips away from existing
+piles. So while termites are putting new wood chips on a pile, other termites
+might be taking wood chips away from it. It seemed like a good prescription for
+getting nowhere. But we pushed ahead and implemented the strategy in a StarLogo
+program, with 1000 termites and 2000 wood chips scattered in a 128x128 grid.</p><p>
+We tried the program, and (much to our surprise) it worked quite well. At
+first, the termites gathered the wood chips into hundreds of small piles. But
+gradually, the number of piles declined, while the number of wood chips in each
+surviving pile increased (see Figure 2, next page). After 2000 iterations,
+there were about 100 piles, with an average of 15 wood chips in each pile.
+After 10,000 iterations, there were fewer than 50 piles left, with an average
+of 30 wood chips in each pile. After 20,000 iterations, only 34 piles remained,
+with an average of 44 wood chips in each pile. The process was rather slow. And
+it was frustrating to watch, as termites often carried wood chips away from
+well-established piles. But, all in all, the program worked quite well.</p><p>
+Why did it work? As we watched the program, it suddenly seemed obvious. Imagine
+what happens when the termites (by chance) remove all of the wood chips from a
+particular pile. Because all of the wood chips are gone from that spot,
+termites will never again drop wood chips there. So the pile has no way of
+restarting. </p><p>
+</p><p>
+<img src="Learning%20About%20Life_files/ALifeJournal4.GIF"></p><p>
+<i>Figure 2.</i></p><p>
+</p><p>
+As long as a pile exists, its size is a two-way street: it can either
+grow or shrink. But the <i>existence</i> of a pile is a one-way street: once it
+is gone, it is gone forever. Thus, a pile is somewhat analogous to a species of
+creatures in the real world. As long as the species exists, the number of
+individuals in the species can go up or down. But once all of the individuals
+are gone, the species is extinct, gone forever. In these cases, zero is a
+"trapped state": once the number of creatures in a species (or the number of
+wood chips in a pile) goes to zero, it can never rebound.</p><p>
+Of course, the analogy between species and piles breaks down in some ways. New
+species are sometimes created, as offshoots of existing species. But in the
+termite program, as written, there is no way to create a new pile. The program
+starts with roughly 2000 wood chips. These wood chips can be viewed as 2000
+"piles," each with a single wood chip. As the program runs, some piles
+disappear, and no new piles are created. So the total number of piles keeps
+shrinking and shrinking.</p><p>
+Callie seemed to thrive in the decentralized environment of StarLogo. At one
+point, while we were struggling to get our termite program working, I asked
+Callie if we should give up on our decentralized approach and program the
+termites to take their wood chips to pre-designated spots. Callie quickly
+dismissed this suggestion:</p><p>
+</p><p>
+<i>Mitchel:	We could write the program so that the termites know where the
+piles are. As soon as a termite picks up a wood chip, it could just go to the
+pile and put it down.</i></p><p>
+</p><p>
+<i>Callie:	Oh, that's boring!</i></p><p>
+</p><p>
+<i>Mitchel:	Why do you think that's boring?</i></p><p>
+</p><p>
+<i>Callie:	Cause you're telling them what to do.</i></p><p>
+</p><p>
+<i>Mitchel:	Is this more like the way it would be in the real world?</i></p><p>
+</p><p>
+<i>Callie:	Yeah. You would almost know what to expect if you tell them to go to
+a particular spot and put it down. You know that there will be three piles.
+Whereas here, you don't know how many mounds there are going to be. Or if the
+number of mounds will increase or decrease. Or things like that... This way,
+they [the termites] made the piles by themselves. It wasn't like they [the
+piles] were artificially put in.</i></p><p>
+</p><p>
+For Callie, pre-programmed behavior, even if effective, was "boring."
+Callie preferred the decentralized approach since it made the termites seem
+more independent ("they made the piles by themselves") and less predictable
+("you don't know how many mounds there are going to be").</p><p>
+</p><p>
+<b></b></p><h2><b>5. Decentralized Thinking</b></h2><p>
+Like Callie, many students are fascinated by decentralized phenomena.
+But they also have a difficult time understanding and creating such phenomena.
+They often slip back into centralized ways of thinking. As I have worked with
+students, I have developed a list of "guiding ideas" that seem to help students
+make sense of decentralized phenomena. These guiding ideas are not very
+"strong." They are neither prescriptive nor predictive. They don't tell you
+precisely how to think about decentralized systems, nor do they tell you how to
+make accurate predictions about such systems. Rather, they are ideas to keep in
+mind as you try to make sense of an unfamiliar system, or to design a new one.
+They highlight some pitfalls to avoid, and some possibilities not to overlook.
+In this section, I discuss five of these guiding ideas.</p><p>
+<b>* Positive Feedback Isn't Always Negative</b></p><p>
+Positive feedback has an image problem. People tend to see positive
+feedback as destructive, making things spiral out of control. For most people,
+positive feedback is symbolized by the screeching sound that results when a
+microphone is placed near a speaker. By contrast, negative feedback is viewed
+as very useful, keeping things under control. Negative feedback is symbolized
+by the thermostat, keeping room temperature at a desired level by turning the
+heater on and off as needed.</p><p>
+Historically, researchers have paid much more attention to negative feedback
+than to positive feedback. As Deneubourg and Goss (1989) note: "When feedback
+is discussed in animal groups, it is nearly always negative feedback that is
+considered, and its role is limited to that of a regulatory mechanism, in which
+fluctuations are damped and equilibrium is the goal...Positive feedback is only
+rarely considered."</p><p>
+When I asked high-school students about positive feedback, most weren't
+familiar with the term. But they were certainly familiar with the concept. When
+I explained what I meant by positive feedback, the students quickly generated
+examples. Not surprisingly, almost all of their examples involved something
+getting out of control, often with destructive consequences. One student talked
+about scratching a mosquito bite, which made the bite itch even more, so she
+scratched it some more, which made it itch even more, and so on. Another
+student talked about stock-market crashes: a few people start selling, which
+makes more people start selling, which makes even more people start selling,
+and so on.</p><p>
+Despite these negative images, positive feedback often plays a crucial role in
+decentralized phenomena. Economist Brian Arthur (1990) points to the geographic
+distribution of cities and industries as an example of a self-organizing
+process driven by positive feedback. Once a small nucleus of high-technology
+electronics companies started in Santa Clara County south of San Francisco, an
+infrastructure developed to serve the needs of those companies. That
+infrastructure encouraged even more electronics companies to locate in Santa
+Clara County, which encouraged the development of an even more robust
+infrastructure. And thus, Silicon Valley was born.</p><p>
+For some students who used StarLogo, the idea of positive feedback provided a
+new way of looking at their world. One day, one student came to me excitedly.
+He had been in downtown Boston at lunch time, and he had a vision. He imagined
+two people walking into a deli to buy lunch.</p><p>
+</p><p>
+<i>Once they get their food, they don't eat it there. They bring it back with
+them. Other people on the street smell the sandwiches and see the deli bag, and
+they say, `Hey, maybe I'll go to the deli for lunch today!" They were just
+walking down the street, minding their own business, and all of the sudden they
+want to go to the deli. As more people go to the deli, there's even more smell
+and more bags. So more people go to the deli. But then the deli runs out of
+food. There's no more smell on the street from the sandwiches. So no one else
+goes to the deli.</i></p><p>
+<b>* Randomness Can Help Create Order</b></p><p>
+Like positive feedback, randomness has a bad image. Most people see
+randomness as annoying at best, destructive at worst. They view randomness in
+opposition to order: randomness undoes order, it makes things disorderly.</p><p>
+In fact, randomness plays an important role in many self-organizing systems. As
+discussed earlier, people often assume that "seeds" are needed to initiate
+patterns and structures. When people see a traffic jam, for example, they
+assume the traffic jam grew from a seed--perhaps a broken bridge or a radar
+trap. In general, this is a useful intuition. The problem is that most people
+have too narrow a conception of "seeds." They think only of preexisting
+inhomogeneities in the environment--like a broken bridge on the highway, or a
+piece of food in an ant's world.</p><p>
+This narrow view of seeds causes misintuitions when people try to make sense of
+self-organizing systems. In self-organizing systems, seeds are neither
+preexisting nor externally imposed. Rather, self-organizing systems often
+create <i>their own</i> seeds. It is here that randomness plays a crucial role.
+In many self-organizing systems, random fluctuations act as the "seeds" from
+which patterns and structures grow.</p><p>
+This combination of random fluctuations plus positive feedback underlies many
+everyday phenomena. Sometimes, at concerts or sporting events, thousands of
+spectators join together in rhythmic, synchronized clapping. How do they
+coordinate their applause? There is no conductor leading them. Here's one way
+to think about what happens. Initially, when everyone starts clapping, the
+applause is totally unorganized. Even people clapping at the same tempo are
+wildly out of phase with one another. But, through some random fluctuation, a
+small subset of people happen to clap at the same tempo, in phase with one
+another. That rhythm stands out, just a little, in the clapping noise. People
+in the audience sense this emerging rhythm and adjust their own clapping to
+join it. Thus, the emerging rhythm becomes a little stronger, and even more
+people conform to it. Eventually, nearly everyone in the audience is clapping
+in a synchronized rhythm. Amazingly, the whole process takes just a few
+seconds, even with thousands of people participating.</p><p>
+<b>* A Flock Isn't a Big Bird</b></p><p>
+In trying to make sense of decentralized systems and self-organizing
+phenomena, the idea of <i>levels</i> is critically important. Interactions
+among objects at one level give rise to new types of objects at another level.
+Interactions among slime-mold cells give rise to slime-mold clusters.
+Interactions among ants give rise to foraging trails. Interactions among cars
+give rise to traffic jams. Interactions among birds give rise to flocks.</p><p>
+In many cases, the objects on one level behave very differently than objects on
+another level. For high-school students, these differences in behavior can be
+very surprising, if not confusing. For example, several high-school students
+used StarLogo to explore the behavior of traffic jams. They wrote simple rules
+for each car (if there is a car close ahead of you, slow down; if not, speed
+up), then observed the traffic jams that resulted from the interactions. The
+students were shocked when the traffic jams began to move backwards, even
+though all of the cars within the jams were moving forward. </p><p>
+Confusion of levels is not a problem restricted to scientifically naive
+high-school students. I showed the StarLogo traffic program to two visiting
+researchers, each of whom is involved in the cybernetics research community.
+They were not at all surprised that the traffic jams were moving backwards.
+They were well aware of that phenomenon. But then one of the researchers said:
+"You know, I've heard that's why there are so many accidents on the freeways in
+Los Angeles. The traffic jams are moving backwards and the cars are rushing
+forward, so there are lots of accidents." The other researcher thought for a
+moment, then replied: "Wait a minute. Cars crash into other cars, not into
+traffic jams." In short, he felt that the first researcher had confused levels,
+mixing cars and jams inappropriately. The two researchers then spent half an
+hour trying to sort out the problem.</p><p>
+<b>* A Traffic Jam Isn't Just a Collection of Cars</b></p><p>
+For most everyday objects, it is fair to think of the object as a
+collection of particular parts (a particular chair might have four particular
+legs, a particular seat, a particular back). But not so with objects like
+traffic jams. Thinking of a traffic jam as a collection of particular parts is
+a sure path to confusion. The cars composing a traffic jam are always changing,
+as some cars leave the front of the jam and other join from behind. Even when
+all of the cars in the jam are replaced with new cars, it is still the same
+traffic jam. A traffic jam can be thought of as an "emergent object"--it
+emerges from the interactions among lower-level objects (in this case, cars).</p><p>
+As students work on StarLogo projects, they encounter many emergent objects. In
+the termite example discussed earlier, the wood-chip piles can be viewed as
+emergent objects. The precise composition of the piles is always changing, as
+termites take away some wood chips and add other wood chips. After a while,
+none of the original wood chips remains, but the pile is still there. </p><p>
+Students often have difficulty thinking about emergent objects. Two students,
+Frank and Ramesh, tried to use StarLogo to create "ant cemeteries." In their
+own (real) ant farms, they had observed ants gathering their dead colleagues
+into neat piles. They wondered how the ants did that. This problem is virtually
+identical to the problem of termites gathering wood chips into piles. But Frank
+and Ramesh resisted the simple decentralized approach that Callie and I used
+for the termites. They were adamant that dead ants should never be taken from a
+cemetery once placed there. They felt that the ants themselves defined the
+cemetery. How can a cemetery grow, they argued, if the dead ants in it are
+continually being taken away? In fact, if Frank and Ramesh had viewed the
+cemetery as an emergent object and allowed the composition of ant-cemeteries to
+vary with time (as Callie and I allowed the composition of the wood-chip piles
+to vary in the termite project), they probably would have been much more
+successful in their project.</p><p>
+<b>* The Hills are Alive</b></p><p>
+In <i>Sciences of the Artificial</i> (1969), Herbert Simon describes a
+scene in which an ant is walking on a beach. Simon notes that the ant's path
+might be quite complex. But the complexity of the path, says Simon, is not
+necessarily a reflection of the complexity of the ant. Rather, it might reflect
+the complexity of the beach. Simon's point: don't underestimate the role of the
+environment in influencing and constraining behavior. People often seem to
+think of the environment as something to be <i>acted upon</i>, not something to
+be <i>interacted with</i>. People tend to focus on the behaviors of individual
+objects, ignoring the environment that surrounds (and interacts with) the
+objects.</p><p>
+A richer view of the environment is particularly important in thinking about
+decentralized and self-organizing systems. In designing StarLogo, I explicitly
+tried to highlight the environment. Most creature-oriented programming
+environments treat the environment as a passive entity, manipulated by the
+creature that move within it. In StarLogo, by contrast, the "patches" of the
+world have equal status with the creatures that move in the world. The
+environment is "alive"--it can execute actions even as creatures move within
+it. By reifying the environment, I hoped to encourage people to think about the
+environment in new ways.  </p><p>
+Some students, however, resisted the idea of an active environment. When I
+explained a StarLogo ant-foraging program to one student, he was worried that
+pheromone trails would continue to attract ants even after the food sources at
+the ends of the trails had been fully depleted. He developed an elaborate
+scheme in which the ants, after collecting all of the food, deposited a second
+pheromone to neutralize the first pheromone. It never occurred to him to let
+the first pheromone evaporate away. In his mind, the ants had to take some
+positive action to get rid of the first pheromone. They couldn't rely on the
+environment to make the first pheromone go away.</p><p>
+</p><p>
+<b></b></p><h2><b>6. Conclusions</b></h2><p>
+The centralized mindset has undoubtedly affected many theories and
+trends in the history of science. Just as children assimilate new information
+by fitting it into their pre-existing models and conceptions of the world, so
+do scientists. As Keller (1985) puts it: "In our zealous desire for familiar
+models of explanation, we risk not noticing the discrepancies between our own
+predispositions and the range of possibilities inherent in natural phenomena.
+In short we risk imposing on nature the very stories we like to hear." In
+particular, we risk imposing centralized models on a decentralized world.</p><p>
+For many years, there has been a self-reinforcing spiral. People saw the world
+in centralized ways, so they constructed centralized tools and models, which
+further encouraged a centralized view of the world. Until recently, there was
+little pressure against this centralization spiral. For many things that people
+created and organized, centralized approaches tended to be adequate, even
+superior to decentralized ones. Even if someone wanted to experiment with
+decentralized approaches, there were few tools or opportunities to do so.</p><p>
+But the centralization spiral is now starting to unwind. As organizations and
+scientific models grow more complex, there is a greater need for decentralized
+ideas. At the same time, new decentralized tools (like StarLogo) are emerging
+that enable people to actually implement and explore such ideas. Still, many
+challenges lie ahead. We need to develop better explanations of why people are
+so committed to centralized explanations. And we to develop better tools to
+help people visualize and manipulate decentralized interactions. Ultimately, we
+need to develop new tools and theories that avoid the simple dichotomy between
+centralization and decentralization, but rather find ways to integrate the two
+approaches, drawing on the best of both. Only then will we truly be ready to
+move beyond the centralized mindset.</p><p>
+</p><p>
+<b></b></p><h2><b>Acknowledgments</b></h2><p>
+Hal Abelson, Seymour Papert, Brian Silverman, Randy Sargent, Ryan Evans,
+and Uri Wilensky have provided encouragement, inspiration, and ideas for the
+StarLogo project. Steve Ocko, Fred Martin, Randy Sargent, Brian Silverman, and
+Seymour Papert have been major contributors to the LEGO/Logo project. Special
+thanks to Chris Langton for his comments on a draft of this paper--and, more
+generally, for his continuing interest in this research. The LEGO Group and the
+National Science Foundation (Grants 851031-0195, MDR-8751190, and TPE-8850449)
+have provided financial support.</p><p>
+</p><p>
+<b></b></p><h2><b>References</b></h2><p>
+Arthur, W.B. (1990). "Positive Feedbacks in the Economy." <i>Scientific
+American</i>, vol. 262, no. 2, pp. 92-99.</p><p>
+Braitenberg, V. (1984). <i>Vehicles</i>. Cambridge, MA: MIT Press.</p><p>
+Brooks, R. (1991). "Intelligence Without Representation." <i>Artificial
+Intelligence</i>, vol. 47, pp. 139-160.</p><p>
+Cohen, M., and Hagan, P. (1981). "Diffusion-Induced Morphogenesis in
+<i>Dictyostelium</i>." <i>Journal of Theoretical Biology</i>, vol. 93, pp.
+881-908.</p><p>
+Dawkins, R. (1986). <i>The Blind Watchmaker</i>. New York: W.W. Norton.</p><p>
+Deneubourg, J.L., and Goss, S. (1989). "Collective Patterns and
+Decision-Making." <i>Ethology, Ecology, &amp; Evolution</i>, vol. 1, pp.
+295-311.</p><p>
+Gleick, J. (1987). <i>Chaos: Making a New Science</i>. New York: Viking Penguin
+Inc.</p><p>
+Holland, J. (1993). "Echoing Emergence." <i>Santa Fe Institute Working Paper
+93-04-023</i>. Santa Fe, NM.</p><p>
+Karakotsios, K (1992). <i>SimLife: The Genetic Playground</i>. Orinda, CA:
+Maxis Inc.</p><p>
+Keller, E.F. (1985). <i>Reflections on Gender and Science</i>. New Haven, CT:
+Yale University Press.</p><p>
+Keller, E.F., and Segel, L. (1970). "Initiation of Slime Mold Aggregation
+Viewed as an Instability." <i>Journal of Theoretical Biology</i>, vol. 26, pp.
+399-415.</p><p>
+Langton, C., ed. (1989). <i>Artificial Life</i>. Redwood City, CA:
+Addison-Wesley.</p><p>
+Lindgren, K. (1991). "Evolutionary Phenomena in Simple Dynamics." In
+<i>Artificial Life II</i>, edited by C. Langton, C. Taylor, J.D. Farmer, and S.
+Rasmussen. Reading, MA: Addison-Wesley.</p><p>
+McCormick, J., and Wright, W. (1991). <i>SimAnt</i>. Orinda, CA: Maxis Inc.</p><p>
+Minsky, M. (1987). <i>The Society of Mind</i>. New York: Simon &amp; Schuster.
+</p><p>
+Paley, W. (1802). <i>Natural Theology--or Evidences of the Existence and
+Attributes of the Deity Collected from the Appearances of Nature</i>. Oxford:
+J. Vincent.</p><p>
+Palmiter, M. (1989). <i>Simulated Evolution</i>. Bayport, NY: Life Sciences
+Associates.</p><p>
+Papert, S. (1980). <i>Mindstorms: Children, Computers, and Powerful Ideas</i>.
+New York: Basic Books.</p><p>
+Papert, S. (1991). "Situating Constructionism," in <i>Constructionism</i>,
+edited by I. Harel and S. Papert. Norwood, NJ: Ablex Publishing.</p><p>
+Resnick, M. (1989). "LEGO, Logo, and Life." In <i>Artificial Life</i>, edited
+by C. Langton. Redwood City, CA: Addison-Wesley.</p><p>
+Resnick, M. (1991). "Animal Simulations with StarLogo: Massive Parallelism for
+the Masses." In <i>From Animals to Animats,</i> edited by J.A. Meyer and S.
+Wilson. Cambridge, MA: MIT Press.</p><p>
+Resnick, M. (1992). "Beyond the Centralized Mindset: Explorations in Massively
+Parallel Microworlds." Unpublished PhD dissertation. Massachusetts Institute of
+Technology.</p><p>
+Rumelhart, D., McClelland, J., and the PDP Research Group. (1986). <i>Parallel
+Distributed Processing</i>. Cambridge, MA: MIT Press.</p><p>
+Simon, H. (1969). <i>The Sciences of the Artificial</i>. Cambridge, MA: MIT
+Press.</p><p>
+Toffoli, T., and Margolus, N. (1987). <i>Cellular Automata Machines</i>.
+Cambridge, MA: MIT Press.</p><p>
+Travers, M. (1989). "Animal Construction Kits." In <i>Artificial Life</i>,
+edited by C. Langton. Redwood City, CA: Addison-Wesley.</p><p>
+Wilson, E.O. (1971). <i>The Insect Societies</i>. Cambridge, MA: Harvard
+University Press.</p><p>
+</p><p>
+</p></body></html>
